@@ -1,0 +1,5 @@
+export {default as About} from './About'
+export {default as PreviousWork} from './PreviousWork'
+export {default as Project} from './Project'
+export {default as Contact} from './Contact'
+export {default as NavBar} from './NavBar'
