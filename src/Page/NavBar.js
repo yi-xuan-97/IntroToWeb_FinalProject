@@ -12,10 +12,6 @@ const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginTop: theme.spacing(1),
   },
- logo: {
-    flexGrow: "1",
-    cursor: "pointer",
-  },
   link: {
     textDecoration: "none",
     color: "white",
