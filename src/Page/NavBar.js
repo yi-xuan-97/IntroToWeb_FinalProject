@@ -7,9 +7,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+
 
 const useStyles = makeStyles((theme) => ({
   navlinks: {
@@ -17,15 +15,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     display: "flex",
     flexWrap: "wrap",
-  },
-  icons: {
-    marginLeft: theme.spacing(35),
-  },
-  icon: {
-    color: "white",
-    height: theme.spacing(5),
-    width: theme.spacing(5),
-    marginLeft: theme.spacing(4),
   },
   link: {
     textDecoration: "none",
@@ -44,7 +33,7 @@ function NavBar() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" style={{ backgroundColor: "#0066cc" }}>
+    <AppBar position="static" style={{ backgroundColor: "#557452" }}>
       <CssBaseline />
       <Toolbar>
         <div className={classes.navlinks}>
@@ -64,11 +53,7 @@ function NavBar() {
           <Link to="/Contact" className={classes.link}>
             Contact Me
           </Link>
-          <div className={classes.icons}>
-            <FontAwesomeIcon className={classes.icon} icon={faLinkedin} />
-            <FontAwesomeIcon className={classes.icon} icon={faGithub} />
-            <FontAwesomeIcon className={classes.icon} icon={faEnvelope} />
-          </div>
+
         </div>
       </Toolbar>
     </AppBar>
