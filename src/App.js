@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import {NavBar, About, Project, PreviousWork, Contact} from './Page';
+import {NavBar,Home, About, Project, PreviousWork, Contact} from './Page';
 
 function App() {
   return (
@@ -12,7 +12,12 @@ function App() {
         <Route
             exact
             path="/"
-            element={<About />}
+            element={<Home />}
+          />
+            <Route
+            exact
+            path="/Homme"
+            element={<Home />}
           />
           <Route
             exact

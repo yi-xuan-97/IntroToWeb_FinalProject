@@ -36,11 +36,11 @@ function NavBar() {
     <AppBar position="static" style={{ backgroundColor: "#0066cc" }}>
     <CssBaseline />
     <Toolbar>
-      {/* <Typography variant="h5" className={classes.logo}>
-        Yixuan Feng
-      </Typography> */}
       <div className={classes.navlinks}>
         <Link to="/" className={classes.link}>
+        </Link>
+        <Link to="/Home" className={classes.link}>
+          Home
         </Link>
         <Link to="/About" className={classes.link}>
           About
