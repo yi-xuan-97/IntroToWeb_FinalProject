@@ -8,7 +8,6 @@ import {
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
-
 const useStyles = makeStyles((theme) => ({
   navlinks: {
     marginTop: theme.spacing(2),
@@ -19,8 +18,8 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "white",
-    fontSize: "22px",
-    marginRight: theme.spacing(8),
+    fontSize: theme.spacing(3),
+    marginRight: "3vw",
     "&:hover": {
       color: "yellow",
       fontWeight: "700",
@@ -37,12 +36,12 @@ function NavBar() {
       <CssBaseline />
       <Toolbar>
         <div className={classes.navlinks}>
-          <Link to="/" className={classes.link}></Link>
+          <Link to="/" className={classes.link} style={{ display: "none" }} />
           <Link to="/Home" className={classes.link}>
             Home
           </Link>
           <Link to="/About" className={classes.link}>
-            About
+            About Me
           </Link>
           <Link to="/Project" className={classes.link}>
             Projects
@@ -53,7 +52,6 @@ function NavBar() {
           <Link to="/Contact" className={classes.link}>
             Contact Me
           </Link>
-
         </div>
       </Toolbar>
     </AppBar>
