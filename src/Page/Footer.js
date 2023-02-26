@@ -28,9 +28,6 @@ function Footer() {
       component="footer"
       className="foot"
     >
-      <p>
-        Nice to meet you! Looking forward to hearing from you in the future!!
-      </p>
 
       <div className={classes.icons}>
         <a href="https://www.linkedin.com/in/yixuan-feng/">
@@ -45,6 +42,9 @@ function Footer() {
           <span class="sr-only">Email</span>
           <FontAwesomeIcon className={classes.icon} icon={faEnvelope} />
         </a>
+      <p>
+        Nice to meet you! Looking forward to hearing from you in the future!!
+      </p>
       </div>
     </Box>
   );

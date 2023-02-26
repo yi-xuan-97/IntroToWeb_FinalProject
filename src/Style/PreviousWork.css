@@ -1,0 +1,25 @@
+.ResumeContainer {
+    margin: 5%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.ResumeContainer img{
+    width: 10vw;
+    height: 10vw;
+    margin-top: 8%;
+}
+
+.ResumeContainer p {
+    text-align: left;
+}
+
+.work_title {
+    font-weight: 700;
+    font-size: 1.5vw;
+    font-family: 'Golos Text', sans-serif;
+}
+.work_detail{
+    font-size: 1.2vw;
+    font-family: 'Golos Text', sans-serif;
+}
