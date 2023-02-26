@@ -1,0 +1,16 @@
+.ProjectContainer {
+  margin-left: 3%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: left;
+}
+
+.pro_title {
+    font-size: 2vw;
+    font-weight: 900;
+    font-family: 'Gloock', serif;
+}
+
+.ProjectContainer a {
+    text-decoration: none;
+}

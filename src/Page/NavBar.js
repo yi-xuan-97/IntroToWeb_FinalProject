@@ -40,14 +40,14 @@ function NavBar() {
           <Link to="/Home" className={classes.link}>
             Home
           </Link>
-          <Link to="/About" className={classes.link}>
-            About Me
+          <Link to="/PreviousWork" className={classes.link}>
+            Resume
           </Link>
           <Link to="/Project" className={classes.link}>
             Projects
           </Link>
-          <Link to="/PreviousWork" className={classes.link}>
-            Resume
+          <Link to="/About" className={classes.link}>
+            About Me
           </Link>
           <Link to="/Contact" className={classes.link}>
             Contact Me

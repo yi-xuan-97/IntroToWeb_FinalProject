@@ -1,6 +1,6 @@
 import React from "react";
 import "../Style/Home.css";
-import pic from "./photo.jpg";
+import pic from "../image/photo.jpg";
 import Grid from "@material-ui/core/Grid";
 
 function Home() {
