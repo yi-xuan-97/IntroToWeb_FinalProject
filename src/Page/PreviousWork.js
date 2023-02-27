@@ -10,47 +10,53 @@ function PreviousWork() {
     <div className="ResumeContainer">
       <Grid container spacing={2} className="gridContainer">
         <Grid item xs={4}>
-          <img src={pic1} />
+          <img src={pic1} alt="mpa logo" />
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">
             Web Development Intern at Minority Programmers Association
           </p>
           <p className="work_detail">
-            Create/modify new page, add new component, and modify component of
-            existing page for more functionality. Style component and page based
-            on change of design. Communicate with UI/UX developer, QA developer
-            and back-end developer for better way to complete task.
+            Responsible for developing new website components and pages, as well
+            as modifying existing components to enhance their functionality.
+            Collaborate with UI/UX developers, QA developers, and back-end
+            developers to ensure optimal website performance. Implement style
+            changes based on design updates and feedback, and maintain open
+            communication channels with all relevant team members to facilitate
+            the development of effective website solutions.
           </p>
           <p className="work_detail">Keywords: React Next, Clickup</p>
         </Grid>
         <Grid item xs={4}>
-          <img src={pic2} />
+          <img src={pic2} alt="repaymile logo" />
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">
             Full stack Software Engineer Intern at Relaymile
           </p>
           <p className="work_detail">
-            Work in back-end team to create new route, edit route, fix broken
-            route and edit model for the use of front-end team. Code refactor
-            for future improvement. Work in front-end team to create/adjust web
-            page based on design, modify existing component for more
-            functionality, add new component to existing page. Creating new page
-            for new feature.
+            Collaborate with the back-end team to develop new routes, update
+            existing routes to enhance functionality, and resolve issues with
+            broken routes. Edit and optimize models to ensure optimal website
+            performance. Perform code refactoring to improve the quality and
+            maintainability of the codebase. Additionally, work with the
+            front-end team to create and modify web pages based on established
+            design principles, add new components to enhance the user
+            experience, and update existing components to improve functionality.
           </p>
           <p className="work_detail">
             Keywords: React, Python, Docker, Postman, Asana
           </p>
         </Grid>
         <Grid item xs={4}>
-          <img src={pic3} />
+          <img src={pic3} alt="swedemom logo" />
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">Software Engineer Intern at Swedemom</p>
           <p className="work_detail">
-            Improve searching function based on code base of SQL and C#. Fix
-            database connection issue.
+            Enhance the search functionality of the website by leveraging the
+            SQL and C# codebase. Identify and resolve any issues related to the
+            database connection to ensure optimal website performance.
           </p>
           <p className="work_detail">Keywords: SQL, C#</p>
         </Grid>

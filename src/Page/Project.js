@@ -16,7 +16,7 @@ import pic3 from "../image/Android_Robot.png";
 const useStyles = makeStyles({
   root: {
     maxWidth: 400,
-    // height: "90%",
+    // fontSize: "5vw",
   },
   media: {
     height: 150,
@@ -45,22 +45,18 @@ function Project() {
               <CardContent>
                 <Typography variant="body1" component="p">
                   <b>
-                    Working with local company Jama software to create a Jira
-                    Jama extension.
+                    Work with local company Jama software to create a Jira Jama
+                    extension.
                   </b>{" "}
-                  Jama Jira Extension allows developer to browse Jama content in
-                  Jira page. My main responsiblity contains:
-                  <ul>
-                    <li>Interview sponsor for detailed project requirement</li>
-                    <li>Author user stories and get feedback from sponsor</li>
-                    <li>Design UI/UX using Figma</li>
-                    <li>
-                      Developing front-end components and pages for searching
-                    </li>
-                    <li>
-                      Work with backend team to connect front-end with backend
-                    </li>
-                  </ul>
+                  Jama Jira Extension enables developers to browse Jama content
+                  in Jira page. In this capacity, my primary responsibilities
+                  included: interviewing the sponsor to determine detailed
+                  project requirements, authoring user stories, and obtaining
+                  feedback from the sponsor. I designed the extension's user
+                  interface and user experience using Figma and developed
+                  front-end components and pages for searching. I worked closely
+                  with the back-end team to ensure seamless integration of the
+                  front-end and back-end components.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -91,11 +87,17 @@ function Project() {
                 <Typography variant="body1" component="p">
                   <b>
                     Process raw data from regional transit organization named
-                    C-Tran for visualizing it’s GPS breadcrumb data deviation.{" "}
+                    C-Tran for visualizing it’s GPS breadcrumb data deviation
+                    and visualize it for analysis.{" "}
                   </b>
-                  Accomplish data cleaning and data visualization using Python
-                  Pandas and Seaborn. Analyse visualization to give final
-                  proposal to C-Tran
+                  <br />
+                  <br />
+                  As part of my responsibilities, I performed data cleaning and
+                  utilized Python Pandas and Seaborn to create statistical
+                  visualizations of the GPS breadcrumb deviation. I analyzed
+                  these visualizations to identify statistical result on GPS
+                  breadcrumb deviation, and presented my findings in a final
+                  proposal to C-Tran."
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -124,6 +126,11 @@ function Project() {
               />
               <CardContent>
                 <Typography variant="body1" component="p">
+                  <b>
+                    The ultimate goal of this project is to create an Android
+                    application. To ensure best practices, the development
+                    process has been broken down into manageable steps.{" "}
+                  </b>
                   For back end section, develop a small REST-ful Android
                   Application. Increamentally increase functionality, generate
                   integration test and unit test with 80% line coverage. For
@@ -131,7 +138,8 @@ function Project() {
                   backend code.{" "}
                   <b>
                     In additionally, work on a sepcial project with Prof. David
-                    for a cloud storage based Java backend and Andoid frontend
+                    for creating a new applcation with a cloud storage based
+                    Java backend and Andoid frontend
                   </b>
                 </Typography>
               </CardContent>

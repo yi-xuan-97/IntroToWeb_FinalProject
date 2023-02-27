@@ -13,12 +13,13 @@ function Home() {
         <Grid item xs={8} className="home_info">
           <h1>Hello there, I'm Yixuan Feng</h1>
           <p>
-            I’m currently a graduate student studying in Portland State
-            University with GPA of 3.9 and will graduate in 2023 June. I have
-            previously worked as both front-end development intern and full
-            stack software engineering intern. I have learned valuable
-            technology knowledge from my previous experience and am a quick
-            learner. Here is a quick summary of my skills:
+            I am currently a graduate student at Portland State University, with
+            an expected graduation date of June 2023 and a cumulative GPA of
+            3.9. During my academic tenure, I have gained valuable experience in
+            both front-end development and full-stack software engineering
+            through my previous internships. I am a quick learner and have a
+            passion for expanding my technological knowledge. Below is a summary
+            of my skills:
           </p>
           <ul>
             <li>Languages: C++, Java, Python, SQL, JavaScript, C#, HTML, C</li>
@@ -44,7 +45,7 @@ function Home() {
             Bachelar of Science in Computer Science <b>Sep. 2015 – Sep. 2017</b>
           </p>
         </Grid>
-        <Grid item xs={1}></Grid>
+        <Grid item xs={2}></Grid>
         <Grid item xs={4} className="home_info_etra">
           <h2>Experince</h2>
           <p>
