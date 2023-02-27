@@ -13,6 +13,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import pic1 from "../image/LC.png";
 import pic2 from "../image/ois.jpg";
+import pic3 from "../image/cat.jpeg";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -117,7 +118,14 @@ function About() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <img src={pic1} alt="Learning Center Logo" width={150} height={130} />
+          <a href="https://www.pdx.edu/learning-center/">
+            <img
+              src={pic1}
+              alt="Learning Center Logo"
+              width={150}
+              height={130}
+            />
+          </a>
           <Typography className={classes.detail}>
             PSU Testing Services provides accommodated testing support for PSU
             students registered with the Disability Resource Center (DRC), as
@@ -210,9 +218,22 @@ function About() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
+          <a href="https://cat.pdx.edu/">
+            <img src={pic3} alt="CAT Logo" width={150} height={130} />
+          </a>
           <Typography className={classes.detail}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            The responsibilities of an Computer Action Team (CAT) Desk
+            Operations Group Volunteer entail various tasks to ensure the smooth
+            functioning of technological infrastructure. This includes
+            monitoring and addressing issues related to technology
+            infrastructure raised by MCECS faculty, staff, and students, as per
+            the training guidelines. Additionally, the support personnel are
+            expected to assist users during front desk duties and perform any
+            IT-related tasks requested. To enhance their IT skills, attending
+            all scheduled trainings, meetings, or workshops is mandatory. Thus,
+            the IT support personnel play a crucial role in maintaining the
+            efficiency of technological infrastructure and ensuring a seamless
+            experience for the users.
           </Typography>
         </AccordionDetails>
       </Accordion>
