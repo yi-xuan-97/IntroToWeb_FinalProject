@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     width: "50%",
     height: "10vh",
-    marginLeft: "25%",
+    marginLeft: "27%",
     marginTop: "2%",
     display: "none",
   },
@@ -72,6 +72,10 @@ function Contact() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  function timeout(delay) {
+    return new Promise( res => setTimeout(res, delay) );
+}
 
   return (
     <div className="aboutContainer">
