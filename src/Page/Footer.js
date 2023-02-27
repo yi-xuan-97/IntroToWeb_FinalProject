@@ -28,23 +28,22 @@ function Footer() {
       component="footer"
       className="foot"
     >
-
       <div className={classes.icons}>
         <a href="https://www.linkedin.com/in/yixuan-feng/">
-          <span class="sr-only">Linkedin</span>
+        <span className="sr-only">Linkedin</span>
           <FontAwesomeIcon className={classes.icon} icon={faLinkedin} />
         </a>
         <a href="https://github.com/yi-xuan-97/">
-          <span class="sr-only">Github</span>
+          <span className="sr-only">Github</span>
           <FontAwesomeIcon className={classes.icon} icon={faGithub} />
         </a>
         <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=+ericafeng0@gmail.com">
-          <span class="sr-only">Email</span>
+          <span className="sr-only">Email</span>
           <FontAwesomeIcon className={classes.icon} icon={faEnvelope} />
         </a>
-      <p>
-        Nice to meet you! Looking forward to hearing from you in the future!!
-      </p>
+        <p>
+          Nice to meet you! Looking forward to hearing from you in the future!!
+        </p>
       </div>
     </Box>
   );
