@@ -10,7 +10,9 @@ function PreviousWork() {
     <div className="ResumeContainer">
       <Grid container spacing={2} className="gridContainer">
         <Grid item xs={4}>
-          <img src={pic1} alt="mpa logo" />
+          <a href="https://www.minorityprogrammers.com/">
+            <img src={pic1} alt="mpa logo" />
+          </a>
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">
@@ -28,7 +30,9 @@ function PreviousWork() {
           <p className="work_detail">Keywords: React Next, Clickup</p>
         </Grid>
         <Grid item xs={4}>
-          <img src={pic2} alt="repaymile logo" />
+          <a href="https://relaymile.com/">
+            <img src={pic2} alt="repaymile logo" />
+          </a>
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">
@@ -49,7 +53,9 @@ function PreviousWork() {
           </p>
         </Grid>
         <Grid item xs={4}>
-          <img src={pic3} alt="swedemom logo" />
+          <a href="https://www.swedemomcenterofgiving.org/?fbclid=IwAR2FbrUj9eSL5Wk7QB5aJDheVNRLZ8XfLhVdsm0bF2JPNezAEpsucFjBL3w">
+            <img src={pic3} alt="swedemom logo" />
+          </a>
         </Grid>
         <Grid item xs={8}>
           <p className="work_title">Software Engineer Intern at Swedemom</p>

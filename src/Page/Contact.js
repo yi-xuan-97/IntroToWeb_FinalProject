@@ -4,14 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useState } from "react";
 import { send } from "emailjs-com";
 import Button from "@material-ui/core/Button";
-import "../Style/About.css";
+import "../Style/Contact.css";
 
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
-
+import { Alert, AlertTitle } from "@material-ui/lab";
 
 const useStyles = makeStyles((theme) => ({
   textField: {
@@ -24,11 +24,20 @@ const useStyles = makeStyles((theme) => ({
   btn: {
     marginTop: "12vh",
   },
+  alert: {
+    textAlign: "left",
+    width: "50%",
+    height: "10vh",
+    marginLeft: "25%",
+    marginTop: "2%",
+    display: "none",
+  },
 }));
 
 function Contact() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  let myRef = React.createRef();
 
   const [toSend, setToSend] = useState({
     name: "",
@@ -38,7 +47,6 @@ function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(toSend);
     if (toSend.name !== "" && toSend.message !== "" && toSend.email !== "") {
       send("service_0w2ygyt", "template_qc1gsvj", toSend, "OYzLiCCpownpUoTOW")
         .then((response) => {
@@ -47,7 +55,7 @@ function Contact() {
         .catch((err) => {
           console.log("FAILED...", err);
         });
-      e.target.reset();
+      myRef.current.style.display = "flex";
     } else {
       handleClickOpen();
     }
@@ -67,9 +75,23 @@ function Contact() {
 
   return (
     <div className="aboutContainer">
+      <Alert
+        severity="success"
+        variant="outlined"
+        id="form_alert"
+        className={classes.alert}
+        ref={myRef}
+      >
+        <AlertTitle>Success</AlertTitle>
+        Your message already sent to Yixuan's email —{" "}
+        <strong>Thank you!</strong>
+      </Alert>
       <form className="about_form">
         <h1>Hello!! Nice to meet you!!!</h1>
-        <h4>Please note that this form will DO send me an email, so please make sure you really have something to say. LOLL</h4>
+        <h4>
+          Please note that this form will DO send me an email, so please please
+          please make sure you really have something to say. LOLL
+        </h4>
         <div className="form_info">
           <TextField
             required

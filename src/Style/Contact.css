@@ -1,0 +1,31 @@
+.about_form {
+  margin: 2%;
+  margin-left: 25%;
+  padding-bottom: 2%;
+  width: 50vw;
+  border-style: solid;
+  border-color: grey;
+  border-radius: 1px;
+  border-width: 1px;
+}
+
+.about_form h4{
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media (max-width: 414px) {
+  .about_form {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 768px) {
+  .about_form {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+}
