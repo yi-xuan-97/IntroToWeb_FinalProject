@@ -38,35 +38,33 @@ function Project() {
       <Grid container spacing={2}>
         <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant="h5" className="pro_title">
-                  Jama software
-                </Typography>
-              </CardContent>
-              <CardMedia
-                className={classes.media}
-                image={pic1}
-                title="Front end"
-              />
-              <CardContent>
-                <Typography variant="body1" component="p">
-                  <b>
-                    Work with local company Jama software to create a Jira Jama
-                    extension.
-                  </b>{" "}
-                  Jama Jira Extension enables developers to browse Jama content
-                  in Jira page. In this capacity, my primary responsibilities
-                  included: interviewing the sponsor to determine detailed
-                  project requirements, authoring user stories, and obtaining
-                  feedback from the sponsor. I designed the extension's user
-                  interface and user experience using Figma and developed
-                  front-end components and pages for searching. I worked closely
-                  with the back-end team to ensure seamless integration of the
-                  front-end and back-end components.
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" className="pro_title">
+                Jama software
+              </Typography>
+            </CardContent>
+            <CardMedia
+              className={classes.media}
+              image={pic1}
+              title="Front end"
+            />
+            <CardContent>
+              <Typography variant="body1" component="p">
+                <b>
+                  Work with local company Jama software to create a Jira Jama
+                  extension.
+                </b>{" "}
+                Jama Jira Extension enables developers to browse Jama content on
+                Jira page. In this capacity, my primary responsibilities
+                included: interviewing the sponsor to determine detailed project
+                requirements, authoring user stories, and obtaining feedback
+                from the sponsor. I designed the extension's user interface and
+                user experience using Figma and developed front-end components
+                and pages for searching. I worked closely with the back-end team
+                to ensure seamless integration of the front-end and back-end
+                components.
+              </Typography>
+            </CardContent>
             <CardActions>
               <Button size="small" color="primary">
                 <a href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend">
@@ -79,35 +77,33 @@ function Project() {
 
         <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant="h5" className="pro_title">
-                  C-Tran data Visualization
-                </Typography>
-              </CardContent>
-              <CardMedia
-                className={classes.media}
-                image={pic2}
-                title="data visualization"
-              />
-              <CardContent>
-                <Typography variant="body1" component="p">
-                  <b>
-                    Process raw data from regional transit organization named
-                    C-Tran for visualizing it’s GPS breadcrumb data deviation
-                    and visualize it for analysis.{" "}
-                  </b>
-                  <br />
-                  <br />
-                  As part of my responsibilities, I performed data cleaning and
-                  utilized Python Pandas and Seaborn to create statistical
-                  visualizations of the GPS breadcrumb deviation. I analyzed
-                  these visualizations to identify statistical result on GPS
-                  breadcrumb deviation, and presented my findings in a final
-                  proposal to C-Tran."
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" className="pro_title">
+                C-Tran data Visualization
+              </Typography>
+            </CardContent>
+            <CardMedia
+              className={classes.media}
+              image={pic2}
+              title="data visualization"
+            />
+            <CardContent>
+              <Typography variant="body1" component="p">
+                <b>
+                  Process raw data from a regional transit organization named
+                  C-Tran for visualizing its GPS breadcrumb data deviation and
+                  visualize it for analysis.{" "}
+                </b>
+                <br />
+                <br />
+                As part of my responsibilities, I performed data cleaning and
+                utilized Python Pandas and Seaborn to create statistical
+                visualizations of the GPS breadcrumb deviation. I analyzed these
+                visualizations to identify statistical results on GPS breadcrumb
+                deviation, and presented my findings in a final proposal to
+                C-Tran."
+              </Typography>
+            </CardContent>
             <CardActions>
               <Button size="small" color="primary">
                 <a href="https://github.com/yi-xuan-97/C-Tran_PartB">
@@ -120,37 +116,31 @@ function Project() {
 
         <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
-            <CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant="h5" className="pro_title">
-                  Android Device Application
-                </Typography>
-              </CardContent>
-              <CardMedia
-                className={classes.media}
-                image={pic3}
-                title="Andoid"
-              />
-              <CardContent>
-                <Typography variant="body1" component="p">
-                  <b>
-                    The ultimate goal of this project is to create an Android
-                    application. To ensure best practices, the development
-                    process has been broken down into manageable steps.{" "}
-                  </b>
-                  For back end section, develop a small REST-ful Android
-                  Application. Increamentally increase functionality, generate
-                  integration test and unit test with 80% line coverage. For
-                  front end section, developing Android device using some of
-                  backend code.{" "}
-                  <b>
-                    In additionally, work on a sepcial project with Prof. David
-                    for creating a new applcation with a cloud storage based
-                    Java backend and Andoid frontend
-                  </b>
-                </Typography>
-              </CardContent>
-            </CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" className="pro_title">
+                Android Device Application
+              </Typography>
+            </CardContent>
+            <CardMedia className={classes.media} image={pic3} title="Andoid" />
+            <CardContent>
+              <Typography variant="body1" component="p">
+                <b>
+                  The ultimate goal of this project is to create an Android
+                  application. To ensure best practices, the development process
+                  has been broken down into manageable steps.{" "}
+                </b>
+                For the back end section, develop a small RESTful Android
+                Application. Incrementally increase functionality, generate
+                integration test and unit test with 80% line coverage. For the
+                front end section, developing Android devices using some backend
+                code.{" "}
+                <b>
+                  In addition, work on a special project with Prof. David for
+                  creating a new application with a cloud storage-based Java
+                  backend and Android frontend
+                </b>
+              </Typography>
+            </CardContent>
             <CardActions>
               <Button size="small" color="primary">
                 <a href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment">

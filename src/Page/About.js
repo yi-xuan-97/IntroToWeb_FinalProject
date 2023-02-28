@@ -149,9 +149,9 @@ function About() {
             is to facilitate exam requests and scheduling for students with
             accommodations and instructors with specific requirements. I
             maintain regular communication with both parties to ensure that any
-            updates or changes are addressed in a timely manner. Given the
-            highly confidential nature of our work, we take great care to
-            minimize the risk of human error.
+            updates or changes are addressed promptly. Given the highly
+            confidential nature of our work, we take great care to minimize the
+            risk of human error.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -202,12 +202,12 @@ function About() {
           </a>
           <Typography className={classes.detail}>
             As an international student mentor, my role is to provide guidance
-            and support to students who are in their first term in PSU. This
+            and support to students who are in their first term at PSU. This
             includes assisting them with their transition to a new country and
             culture, helping them navigate the academic system, and offering
             advice and support on personal and social issues. I may also
             organize social and cultural events to help students build
-            connections and feel more integrated in their new community, and
+            connections and feel more integrated into their new community, and
             facilitate communication between students and university staff.
             Through my work, I contribute to the success and well-being of
             international students, helping them to thrive academically and
@@ -234,21 +234,27 @@ function About() {
         </AccordionSummary>
         <AccordionDetails>
           <a href="https://cat.pdx.edu/">
-            <img src={pic3} alt="CAT Logo" width={150} height={130} className={classes.image} />
+            <img
+              src={pic3}
+              alt="CAT Logo"
+              width={150}
+              height={130}
+              className={classes.image}
+            />
           </a>
           <Typography className={classes.detail}>
-            The responsibilities of an Computer Action Team (CAT) Desk
-            Operations Group Volunteer entail various tasks to ensure the smooth
+            The responsibilities of a Computer Action Team (CAT) Desk Operations
+            Group Volunteer entail various tasks to ensure the smooth
             functioning of technological infrastructure. This includes
             monitoring and addressing issues related to technology
             infrastructure raised by MCECS faculty, staff, and students, as per
-            the training guidelines. Additionally, the support personnel are
-            expected to assist users during front desk duties and perform any
-            IT-related tasks requested. To enhance their IT skills, attending
-            all scheduled trainings, meetings, or workshops is mandatory. Thus,
-            the IT support personnel play a crucial role in maintaining the
-            efficiency of technological infrastructure and ensuring a seamless
-            experience for the users.
+            the training guidelines. Additionally, we are expected to assist
+            users during front desk duties and perform any IT-related tasks
+            requested. To enhance their IT skills, attending all scheduled
+            trainings, meetings, or workshops is mandatory. Thus, the IT support
+            personnel play a crucial role in maintaining the efficiency of
+            technological infrastructure and ensuring a seamless experience for
+            the users.
           </Typography>
         </AccordionDetails>
       </Accordion>

@@ -4,9 +4,7 @@ import pic from "../image/photo.jpg";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-
-}));
+const useStyles = makeStyles((theme) => ({}));
 function Home() {
   return (
     <div className="HomeContainer">
@@ -33,7 +31,7 @@ function Home() {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={1} className="rm" ></Grid>
+        <Grid item xs={1} className="rm"></Grid>
         <Grid item xs={12} sm={4} className="home_info_etra">
           <h2>Education</h2>
           <p className="home_co_title">Portland State University</p>
@@ -42,16 +40,16 @@ function Home() {
           </p>
           <p className="home_co_title">Portland State University</p>
           <p>
-            Bachelar of Science in Computer Science <b>Sep. 2017 – Dec. 2020</b>
+            Bachelor of Science in Computer Science <b>Sep. 2017 – Dec. 2020</b>
           </p>
           <p className="home_co_title">Changchun University of Technology</p>
           <p>
-            Bachelar of Science in Computer Science <b>Sep. 2015 – Sep. 2017</b>
+            Bachelor of Science in Computer Science <b>Sep. 2015 – Sep. 2017</b>
           </p>
         </Grid>
         <Grid item sm={2} className="rm"></Grid>
         <Grid item xs={12} sm={4} className="home_info_etra">
-          <h2>Experince</h2>
+          <h2>Experience</h2>
           <p>
             <b>Software Engineer Intern</b> at Swedemom
           </p>

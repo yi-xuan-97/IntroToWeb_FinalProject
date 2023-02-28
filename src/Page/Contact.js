@@ -94,7 +94,7 @@ function Contact() {
         <h1>Hello!! Nice to meet you!!!</h1>
         <h4>
           Please note that this form will DO send me an email, so please please
-          please make sure you really have something to say. LOLL
+          please make sure you have something to say. LOLL
         </h4>
         <div className="form_info">
           <TextField
