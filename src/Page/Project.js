@@ -13,15 +13,22 @@ import pic1 from "../image/frontend.webp";
 import pic2 from "../image/data.jpg";
 import pic3 from "../image/Android_Robot.png";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
-    // fontSize: "5vw",
+    maxWidth: 600,
+  },
+  card: {
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: "2vw",
+    },
   },
   media: {
     height: 150,
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
-});
+}));
 
 function Project() {
   const classes = useStyles();
@@ -29,7 +36,7 @@ function Project() {
   return (
     <div className="ProjectContainer">
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
             <CardActionArea>
               <CardContent>
@@ -70,7 +77,7 @@ function Project() {
           </Card>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
             <CardActionArea>
               <CardContent>
@@ -111,7 +118,7 @@ function Project() {
           </Card>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
             <CardActionArea>
               <CardContent>

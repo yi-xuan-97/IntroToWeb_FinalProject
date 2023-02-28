@@ -18,12 +18,18 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "white",
-    fontSize: theme.spacing(3),
+    fontSize: "2vw",
     marginRight: "3vw",
     "&:hover": {
       color: "yellow",
       fontWeight: "700",
       borderBottom: "1px solid white",
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      fontSize: "2.5vw",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3vw",
     },
   },
 }));

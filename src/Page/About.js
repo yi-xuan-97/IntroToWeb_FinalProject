@@ -22,25 +22,35 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontSize: theme.typography.pxToRem(20),
     fontWeight: theme.typography.fontWeightRegular,
-    flexBasis: "45%",
+    flexBasis: "50%",
     fontFamily: "'Golos Text', sans-serif",
-    // flexShrink: 0,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: theme.typography.pxToRem(15),
+    },
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.secondary,
-    flexBasis: "35%",
-    // flexShrink: 0,
+    flexBasis: "38%",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: theme.typography.pxToRem(10),
+    },
   },
   thirdHeading: {
     fontSize: theme.typography.pxToRem(15),
     color: theme.palette.text.primary,
+    [theme.breakpoints.down("xs")]: {
+      fontSize: theme.typography.pxToRem(10),
+    },
   },
   icon: {
     height: theme.spacing(15),
     width: theme.spacing(10),
     marginLeft: theme.spacing(3),
     marginRight: theme.spacing(5),
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
   detail: {
     fontFamily: "'Golos Text', sans-serif",
@@ -48,6 +58,10 @@ const useStyles = makeStyles((theme) => ({
   image: {
     marginLeft: "1vw",
     marginRight: "1vw",
+    flexBasis: "50%",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -83,8 +97,8 @@ function About() {
             <img
               src={pic2}
               alt="OIS Logo"
-              width={120}
-              height={120}
+              width={150}
+              height={130}
               className={classes.image}
             />
           </a>
@@ -124,6 +138,7 @@ function About() {
               alt="Learning Center Logo"
               width={150}
               height={130}
+              className={classes.image}
             />
           </a>
           <Typography className={classes.detail}>
@@ -219,7 +234,7 @@ function About() {
         </AccordionSummary>
         <AccordionDetails>
           <a href="https://cat.pdx.edu/">
-            <img src={pic3} alt="CAT Logo" width={150} height={130} />
+            <img src={pic3} alt="CAT Logo" width={150} height={130} className={classes.image} />
           </a>
           <Typography className={classes.detail}>
             The responsibilities of an Computer Action Team (CAT) Desk

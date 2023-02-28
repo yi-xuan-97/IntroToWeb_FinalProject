@@ -1,4 +1,5 @@
 .HomeContainer {
+  margin-left: 3%;
   margin-top: 1%;
   margin-bottom: 3%;
   margin-right: 3%;
@@ -9,10 +10,10 @@
   font-size: 3vw;
 }
 
-.home_img img {
-  margin-top: 10%;
-  width: 20vw;
-  height: 20vw;
+.my_pic {
+  margin-top: 15%;
+  width: 70%;
+  height: 70%;
 }
 
 .home_info {
@@ -26,7 +27,7 @@
   font-family: "Golos Text", sans-serif;
 }
 .home_info_etra h2 {
-  font-family: 2vw;
+  font-family: 1.5vw;
 }
 .home_info_etra p {
   font-family: 2vw;
@@ -36,6 +37,11 @@
   font-weight: 700;
 }
 
-.home_co_detail {
-  
+@media (max-width: 600px) {
+  .rm {
+    display: none;
+  }
+  .home_info {
+    font-size: 3vw;
+  }
 }

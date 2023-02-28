@@ -2,15 +2,19 @@ import React from "react";
 import "../Style/Home.css";
 import pic from "../image/photo.jpg";
 import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
 
+const useStyles = makeStyles((theme) => ({
+
+}));
 function Home() {
   return (
     <div className="HomeContainer">
       <Grid container spacing={2}>
-        <Grid item xs={4} className="home_img">
-          <img src={pic} alt="Yixuan in NY" width={300} height={300} />
+        <Grid item xs={4} className="home_img, rm">
+          <img src={pic} className="my_pic" alt="Yixuan in NY" />
         </Grid>
-        <Grid item xs={8} className="home_info">
+        <Grid item xs={12} sm={8} className="home_info">
           <h1>Hello there, I'm Yixuan Feng</h1>
           <p>
             I am currently a graduate student at Portland State University, with
@@ -29,8 +33,8 @@ function Home() {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={1}></Grid>
-        <Grid item xs={4} className="home_info_etra">
+        <Grid item xs={1} className="rm" ></Grid>
+        <Grid item xs={12} sm={4} className="home_info_etra">
           <h2>Education</h2>
           <p className="home_co_title">Portland State University</p>
           <p>
@@ -45,8 +49,8 @@ function Home() {
             Bachelar of Science in Computer Science <b>Sep. 2015 – Sep. 2017</b>
           </p>
         </Grid>
-        <Grid item xs={2}></Grid>
-        <Grid item xs={4} className="home_info_etra">
+        <Grid item sm={2} className="rm"></Grid>
+        <Grid item xs={12} sm={4} className="home_info_etra">
           <h2>Experince</h2>
           <p>
             <b>Software Engineer Intern</b> at Swedemom
