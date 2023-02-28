@@ -74,8 +74,8 @@ function Contact() {
   };
 
   function timeout(delay) {
-    return new Promise( res => setTimeout(res, delay) );
-}
+    return new Promise((res) => setTimeout(res, delay));
+  }
 
   return (
     <div className="aboutContainer">

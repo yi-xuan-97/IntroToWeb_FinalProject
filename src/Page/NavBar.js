@@ -18,15 +18,18 @@ const useStyles = makeStyles((theme) => ({
   link: {
     textDecoration: "none",
     color: "white",
-    fontSize: "2vw",
+    fontSize: "1.8vw",
     marginRight: "3vw",
     "&:hover": {
       color: "yellow",
       fontWeight: "700",
       borderBottom: "1px solid white",
     },
+    [theme.breakpoints.up("xl")]: {
+      fontSize: "1vw",
+    },
     [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "2.5vw",
+      fontSize: "2.2vw",
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "3vw",
@@ -42,7 +45,9 @@ function NavBar() {
       <CssBaseline />
       <Toolbar>
         <div className={classes.navlinks}>
-          <Link to="/" className={classes.link} style={{ display: "none" }} />
+          <Link to="/" className={classes.link} style={{ display: "none" }}>
+            /
+          </Link>
           <Link to="/Home" className={classes.link}>
             Home
           </Link>

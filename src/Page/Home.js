@@ -10,7 +10,9 @@ function Home() {
     <div className="HomeContainer">
       <Grid container spacing={2}>
         <Grid item xs={4} className="home_img, rm">
-          <img src={pic} className="my_pic" alt="Yixuan in NY" />
+          <a href="https://www.linkedin.com/in/yixuan-feng/">
+            <img src={pic} className="my_pic" alt="Yixuan in NY" />
+          </a>
         </Grid>
         <Grid item xs={12} sm={8} className="home_info">
           <h1>Hello there, I'm Yixuan Feng</h1>

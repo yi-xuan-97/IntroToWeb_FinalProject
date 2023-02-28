@@ -44,10 +44,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
-    height: theme.spacing(15),
-    width: theme.spacing(10),
-    marginLeft: theme.spacing(3),
-    marginRight: theme.spacing(5),
+    height: "9vw",
+    width: "8vw",
+    marginTop: "1vw",
+    marginLeft: "2vw",
+    marginRight: "3vw",
     [theme.breakpoints.down("xs")]: {
       display: "none",
     },
@@ -286,7 +287,7 @@ function About() {
           id="panel2a-header"
         >
           <Typography className={classes.heading}>
-            Perfect partner for a slow walk
+            Perfect partner for a walk
           </Typography>
           <Typography className={classes.secondaryHeading}></Typography>
         </AccordionSummary>

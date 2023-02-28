@@ -30,7 +30,7 @@ function Footer() {
     >
       <div className={classes.icons}>
         <a href="https://www.linkedin.com/in/yixuan-feng/">
-        <span className="sr-only">Linkedin</span>
+          <span className="sr-only">Linkedin</span>
           <FontAwesomeIcon className={classes.icon} icon={faLinkedin} />
         </a>
         <a href="https://github.com/yi-xuan-97/">
