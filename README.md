@@ -1,6 +1,6 @@
 
-# Final Project for Intro to Web Dev
-**Yixuan's Personal Websit**
+# Yixuan's Personal Website 
+**Final Project for Intro to Web Dev**
 
  This is the final project for intro to web dev, the project uses React as it's framework. If you would like to run this project, simply download the project and then
 
