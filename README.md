@@ -32,6 +32,7 @@ There are some youtube videos, blogs, tutorials that helps me get the proejct, h
 * https://medium.com/geekculture/how-to-send-emails-from-a-form-in-react-emailjs-6cdd21bb4190
 * https://www.geeksforgeeks.org/what-is-the-equivalent-of-document-getelementbyid-in-react/
 * https://www.youtube.com/watch?v=NgWGllOjkbs
+* https://stackoverflow.com/questions/65426791/material-ui-inputbase-is-creating-another-text-area-hidden-element
 
 
 

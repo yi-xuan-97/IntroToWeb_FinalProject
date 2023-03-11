@@ -45,7 +45,9 @@ function NavBar() {
       <CssBaseline />
       <Toolbar>
         <div className={classes.navlinks}>
-          <h1 style={{ width:"1px", height:"1px" , overflow:"hidden" }}>Yixuan Feng</h1>
+          <h1 style={{ width: "1px", height: "1px", overflow: "hidden" }}>
+            Yixuan Feng
+          </h1>
           <Link to="/" className={classes.link} style={{ display: "none" }}>
             /
           </Link>

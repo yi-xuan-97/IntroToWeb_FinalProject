@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Shantell Sans",
     fontSize: "2vw",
-  }
+  },
 }));
 
 function Project() {
@@ -43,7 +43,7 @@ function Project() {
         <Grid item className="card" xs={12} sm={4}>
           <Card className={classes.root}>
             <CardContent>
-              <Typography gutterBottom variant="h2" className={classes.title} >
+              <Typography gutterBottom variant="h2" className={classes.title}>
                 Jama software
               </Typography>
             </CardContent>
