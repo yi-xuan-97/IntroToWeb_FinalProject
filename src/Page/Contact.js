@@ -91,7 +91,7 @@ function Contact() {
         <strong>Thank you!</strong>
       </Alert>
       <form className="about_form">
-        <p>Hello!! Nice to meet you!!!</p>
+        <p className="welcome">Hello!! Nice to meet you!!!</p>
         <p>
           Please note that this form will DO send me an email, so please please
           please make sure you have something to say. LOLL
@@ -128,7 +128,7 @@ function Contact() {
             value={toSend.message}
             aria-label="message"
             multiline
-            minRows={4}
+            rows={4}
             label="Leave me a message"
             className={classes.textField}
             onChange={handleChange}

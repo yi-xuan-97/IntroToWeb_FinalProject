@@ -10,9 +10,9 @@
   border-width: 1px;
 }
 
-.about_form h4 {
-  width: 80%;
-  margin-left: 10%;
+.welcome {
+  font-size: 2vw;
+  font-family: "Shantell Sans", cursive;
 }
 
 @media (max-width: 414px) {
