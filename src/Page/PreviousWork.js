@@ -25,9 +25,9 @@ function PreviousWork() {
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <p className="work_title">
+          <h2 className="work_title">
             Web Development Intern at Minority Programmers Association
-          </p>
+          </h2>
           <p className="work_time">March 2021 – June 2021</p>
           <p className="work_detail">
             Responsible for developing new website components and pages, as well
@@ -46,9 +46,9 @@ function PreviousWork() {
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <p className="work_title">
+          <h2 className="work_title">
             Full stack Software Engineer Intern at Relaymile
-          </p>
+          </h2>
           <p className="work_time">April 2021 – July 2021</p>
           <p className="work_detail">
             Collaborate with the back-end team to develop new routes, update
@@ -70,7 +70,7 @@ function PreviousWork() {
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>
-          <p className="work_title">Software Engineer Intern at Swedemom</p>
+          <h2 className="work_title">Software Engineer Intern at Swedemom</h2>
           <p className="work_time">July 2021 – August 2021</p>
           <p className="work_detail">
             Enhance the search functionality of the website by leveraging the

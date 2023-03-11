@@ -91,11 +91,11 @@ function Contact() {
         <strong>Thank you!</strong>
       </Alert>
       <form className="about_form">
-        <h1>Hello!! Nice to meet you!!!</h1>
-        <h4>
+        <p>Hello!! Nice to meet you!!!</p>
+        <p>
           Please note that this form will DO send me an email, so please please
           please make sure you have something to say. LOLL
-        </h4>
+        </p>
         <div className="form_info">
           <TextField
             required
@@ -126,6 +126,7 @@ function Contact() {
             id="form_message"
             name="message"
             value={toSend.message}
+            aria-label="message"
             multiline
             minRows={4}
             label="Leave me a message"
