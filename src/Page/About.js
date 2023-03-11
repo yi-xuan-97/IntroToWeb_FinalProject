@@ -76,7 +76,9 @@ function About() {
 
   return (
     <div className="aboutContainer">
-      <h1>Now that you know me enough from my CS related experince</h1>
+      <h1 className="about_title">
+        Now that you know me enough from my CS related experince
+      </h1>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

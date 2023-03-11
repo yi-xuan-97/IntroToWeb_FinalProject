@@ -41,7 +41,7 @@ function Footer() {
           <span className="sr-only">Email</span>
           <FontAwesomeIcon className={classes.icon} icon={faEnvelope} />
         </a>
-        <p>
+        <p className="foot_info">
           Nice to meet you! Looking forward to hearing from you in the future!!
         </p>
       </div>

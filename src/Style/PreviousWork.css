@@ -4,28 +4,27 @@
   margin-bottom: 3%;
 }
 
-.ResumeContainer img {
+.work_img {
   width: 13vw;
   height: 13vw;
   margin-top: 20%;
-}
-
-.ResumeContainer p {
-  text-align: left;
 }
 
 .work_title {
   font-weight: 700;
   font-size: 1.5vw;
   font-family: "Golos Text", sans-serif;
+  text-align: left;
 }
 .work_detail {
   font-size: 1.2vw;
   font-family: "Golos Text", sans-serif;
+  text-align: left;
 }
 
 .work_time {
   font-size: 1vw;
+  text-align: left;
 }
 
 @media (max-width: 600px) {

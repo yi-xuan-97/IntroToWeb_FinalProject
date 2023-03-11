@@ -71,7 +71,10 @@ function Project() {
             </CardContent>
             <CardActions>
               <Button size="small" color="primary">
-                <a href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend">
+                <a
+                  className="project_link"
+                  href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend"
+                >
                   Learn More
                 </a>
               </Button>
@@ -110,7 +113,10 @@ function Project() {
             </CardContent>
             <CardActions>
               <Button size="small" color="primary">
-                <a href="https://github.com/yi-xuan-97/C-Tran_PartB">
+                <a
+                  className="project_link"
+                  href="https://github.com/yi-xuan-97/C-Tran_PartB"
+                >
                   Learn More
                 </a>
               </Button>
@@ -147,7 +153,10 @@ function Project() {
             </CardContent>
             <CardActions>
               <Button size="small" color="primary">
-                <a href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment">
+                <a
+                  className="project_link"
+                  href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment"
+                >
                   Learn More
                 </a>
               </Button>

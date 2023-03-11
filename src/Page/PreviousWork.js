@@ -21,7 +21,7 @@ function PreviousWork() {
       <Grid container spacing={3} className="gridContainer">
         <Grid item xs={3} className={classes.pic}>
           <a href="https://www.minorityprogrammers.com/">
-            <img src={pic1} alt="mpa logo" />
+            <img className="work_img" src={pic1} alt="mpa logo" />
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>
@@ -42,7 +42,7 @@ function PreviousWork() {
         </Grid>
         <Grid item xs={3} className={classes.pic}>
           <a href="https://relaymile.com/">
-            <img src={pic2} alt="repaymile logo" />
+            <img className="work_img" src={pic2} alt="repaymile logo" />
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>
@@ -66,7 +66,7 @@ function PreviousWork() {
         </Grid>
         <Grid item xs={3} className={classes.pic}>
           <a href="https://www.swedemomcenterofgiving.org/?fbclid=IwAR2FbrUj9eSL5Wk7QB5aJDheVNRLZ8XfLhVdsm0bF2JPNezAEpsucFjBL3w">
-            <img src={pic3} alt="swedemom logo" />
+            <img className="work_img" src={pic3} alt="swedemom logo" />
           </a>
         </Grid>
         <Grid item xs={12} sm={8}>

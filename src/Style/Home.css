@@ -5,7 +5,7 @@
   margin-right: 3%;
 }
 
-.home_info h1 {
+.home_title {
   font-family: "Shantell Sans", cursive;
   font-size: 3vw;
 }
@@ -26,11 +26,8 @@
   text-align: left;
   font-family: "Golos Text", sans-serif;
 }
-.home_info_etra h2 {
+.home_subtitle {
   font-family: 1.5vw;
-}
-.home_info_etra p {
-  font-family: 2vw;
 }
 
 .home_co_title {
