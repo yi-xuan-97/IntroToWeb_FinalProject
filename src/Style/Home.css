@@ -38,7 +38,25 @@
   .rm {
     display: none;
   }
+  .home_title {
+    font-size: 4.5vw;
+  }
   .home_info {
     font-size: 3vw;
+  }
+  .home_info_etra {
+    font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .home_info_etra {
+    font-size: 1.5vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home_info_etra {
+    font-size: 1.2vw;
   }
 }

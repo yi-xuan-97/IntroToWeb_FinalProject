@@ -31,6 +31,15 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "Shantell Sans",
     fontSize: "2vw",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "5vw",
+    },
+  },
+  detail: {
+    fontSize: "1vw",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "2.5vw",
+    },
   },
 }));
 
@@ -53,7 +62,11 @@ function Project() {
               title="Front end"
             />
             <CardContent>
-              <Typography variant="body1" component="p">
+              <Typography
+                variant="body1"
+                component="p"
+                className={classes.detail}
+              >
                 <b>
                   Work with local company Jama software to create a Jira Jama
                   extension.
@@ -95,7 +108,11 @@ function Project() {
               title="data visualization"
             />
             <CardContent>
-              <Typography variant="body1" component="p">
+              <Typography
+                variant="body1"
+                component="p"
+                className={classes.detail}
+              >
                 <b>
                   Process raw data from a regional transit organization named
                   C-Tran for visualizing its GPS breadcrumb data deviation and
@@ -133,7 +150,11 @@ function Project() {
             </CardContent>
             <CardMedia className={classes.media} image={pic3} title="Andoid" />
             <CardContent>
-              <Typography variant="body1" component="p">
+              <Typography
+                variant="body1"
+                component="p"
+                className={classes.detail}
+              >
                 <b>
                   The ultimate goal of this project is to create an Android
                   application. To ensure best practices, the development process

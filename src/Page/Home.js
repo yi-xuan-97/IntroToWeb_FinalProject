@@ -4,7 +4,6 @@ import pic from "../image/photo.jpg";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({}));
 function Home() {
   return (
     <div className="HomeContainer">

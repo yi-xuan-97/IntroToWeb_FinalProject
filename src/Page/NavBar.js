@@ -17,16 +17,15 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       color: "yellow",
       fontWeight: "700",
-      borderBottom: "1px solid white",
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: "1vw",
+      fontSize: "0.9vw",
     },
-    [theme.breakpoints.between("sm", "md")]: {
-      fontSize: "2.2vw",
+    [theme.breakpoints.between("xs", "sm")]: {
+      fontSize: "2.5vw",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "3vw",
+      fontSize: "4vw",
     },
   },
 }));
