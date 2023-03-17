@@ -73,10 +73,6 @@ function Contact() {
     setOpen(false);
   };
 
-  function timeout(delay) {
-    return new Promise((res) => setTimeout(res, delay));
-  }
-
   return (
     <div className="aboutContainer">
       <Alert

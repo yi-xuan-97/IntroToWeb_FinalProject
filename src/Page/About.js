@@ -68,11 +68,6 @@ const useStyles = makeStyles((theme) => ({
 
 function About() {
   const classes = useStyles();
-  // const [value, setValue] = React.useState(0);
-
-  // const handleChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
 
   return (
     <div className="aboutContainer">

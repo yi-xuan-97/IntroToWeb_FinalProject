@@ -80,7 +80,7 @@ function Project() {
                 className="project_link"
                 href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend"
               >
-                  Learn More
+                Learn More
               </a>
             </CardActions>
           </Card>
@@ -120,12 +120,12 @@ function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-                <a
-                  className="project_link"
-                  href="https://github.com/yi-xuan-97/C-Tran_PartB"
-                >
-                  Learn More
-                </a>
+              <a
+                className="project_link"
+                href="https://github.com/yi-xuan-97/C-Tran_PartB"
+              >
+                Learn More
+              </a>
             </CardActions>
           </Card>
         </Grid>
@@ -162,12 +162,12 @@ function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-                <a
-                  className="project_link"
-                  href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment"
-                >
-                  Learn More
-                </a>
+              <a
+                className="project_link"
+                href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment"
+              >
+                Learn More
+              </a>
             </CardActions>
           </Card>
         </Grid>

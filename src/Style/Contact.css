@@ -11,7 +11,7 @@
 }
 
 .welcome {
-  font-size: 2vw;
+  font-size: 30px;
   font-family: "Shantell Sans", cursive;
 }
 
@@ -22,11 +22,14 @@
     margin-top: 10%;
   }
   .welcome {
-    font-size: 5vw;
+    font-size: 25px;
   }
 }
 
 @media (min-width: 415px) and (max-width: 768px) {
+  .welcome {
+    font-size: 25px;
+  }
   .about_form {
     width: 80%;
     margin-left: 10%;
