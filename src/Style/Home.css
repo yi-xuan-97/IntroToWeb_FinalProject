@@ -7,7 +7,7 @@
 
 .home_title {
   font-family: "Shantell Sans", cursive;
-  font-size: 3vw;
+  font-size: 35px;
 }
 
 .my_pic {
@@ -18,16 +18,17 @@
 
 .home_info {
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 24px;
   font-family: "Golos Text", sans-serif;
 }
 
 .home_info_etra {
+  font-size: 18px;
   text-align: left;
   font-family: "Golos Text", sans-serif;
 }
 .home_subtitle {
-  font-family: 1.5vw;
+  font-size: 26px;
 }
 
 .home_co_title {
@@ -39,24 +40,30 @@
     display: none;
   }
   .home_title {
-    font-size: 4.5vw;
+    font-size: 30px;
   }
   .home_info {
-    font-size: 3vw;
+    font-size: 25px;
   }
   .home_info_etra {
-    font-size: 2.5vw;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
+  .home_title {
+    font-size: 30px;
+  }
+  .home_info {
+    font-size: 15px;
+  }
   .home_info_etra {
-    font-size: 1.5vw;
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1280px) {
   .home_info_etra {
-    font-size: 1.2vw;
+    font-size: 16px;
   }
 }

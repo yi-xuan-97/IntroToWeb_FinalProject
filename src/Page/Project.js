@@ -29,16 +29,10 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontFamily: "Shantell Sans",
-    fontSize: "2vw",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "5vw",
-    },
+    fontSize: "30px",
   },
   detail: {
-    fontSize: "1vw",
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "2.5vw",
-    },
+    fontSize: "18px",
   },
 }));
 
@@ -82,14 +76,12 @@ function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
-                <a
-                  className="project_link"
-                  href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend"
-                >
+              <a
+                className="project_link"
+                href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend"
+              >
                   Learn More
-                </a>
-              </Button>
+              </a>
             </CardActions>
           </Card>
         </Grid>
@@ -128,14 +120,12 @@ function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
                 <a
                   className="project_link"
                   href="https://github.com/yi-xuan-97/C-Tran_PartB"
                 >
                   Learn More
                 </a>
-              </Button>
             </CardActions>
           </Card>
         </Grid>
@@ -172,14 +162,12 @@ function Project() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary">
                 <a
                   className="project_link"
                   href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment"
                 >
                   Learn More
                 </a>
-              </Button>
             </CardActions>
           </Card>
         </Grid>

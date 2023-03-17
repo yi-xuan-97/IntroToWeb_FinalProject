@@ -12,29 +12,29 @@
 
 .work_title {
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 22px;
   font-family: "Golos Text", sans-serif;
   text-align: left;
 }
 .work_detail {
-  font-size: 1.2vw;
+  font-size: 18px;
   font-family: "Golos Text", sans-serif;
   text-align: left;
 }
 
 .work_time {
-  font-size: 1vw;
+  font-size: 15px;
   text-align: left;
 }
 
 @media (max-width: 600px) {
   .work_title {
-    font-size: 5vw;
+    font-size: 28px;
   }
   .work_detail {
-    font-size: 4vw;
+    font-size: 20px;
   }
   .work_time {
-    font-size: 3vw;
+    font-size: 18px;
   }
 }
