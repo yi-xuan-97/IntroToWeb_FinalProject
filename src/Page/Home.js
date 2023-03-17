@@ -32,22 +32,21 @@ function Home() {
           </ul>
         </Grid>
         <Grid item xs={1} className="rm"></Grid>
-        <Grid item xs={12} sm={5} className="home_info_etra">
+        <Grid item xs={12} sm={6} className="home_info_etra">
           <h2 className="home_subtitle">Education</h2>
-          <p className="home_co_title">Portland State University</p>
+          <h3 className="home_co_title">Portland State University</h3>
           <p>
             Master of Science in Computer Science <b>Sep. 2021 – Jun. 2023</b>
           </p>
-          <p className="home_co_title">Portland State University</p>
+          <h3 className="home_co_title">Portland State University</h3>
           <p>
             Bachelor of Science in Computer Science <b>Sep. 2017 – Dec. 2020</b>
           </p>
-          <p className="home_co_title">Changchun University of Technology</p>
+          <h3 className="home_co_title">Changchun University of Technology</h3>
           <p>
             Bachelor of Science in Computer Science <b>Sep. 2015 – Sep. 2017</b>
           </p>
         </Grid>
-        <Grid item sm={1} className="rm"></Grid>
         <Grid item xs={12} sm={4} className="home_info_etra">
           <h2 className="home_subtitle">Experience</h2>
           <p>
