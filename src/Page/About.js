@@ -184,6 +184,32 @@ function About() {
           id="panel2a-header"
         >
           <Typography className={classes.heading}>
+            Grader for Advanced Programming in Java
+          </Typography>
+          <Typography className={classes.secondaryHeading}>
+            CS Department @PSU
+          </Typography>
+          <Typography className={classes.thirdHeading}>
+            Jun 2022 - Aug 2022
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={classes.detail}>
+            Due to my exceptional performance in advanced Java programming, I
+            was invited by the instructor to become a grader. As a grader, I am
+            responsible for evaluating projects, quizzes, and exams, as well as
+            addressing related questions.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography className={classes.heading}>
             International student Mentor
           </Typography>
           <Typography className={classes.secondaryHeading}>
