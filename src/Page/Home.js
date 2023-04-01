@@ -17,7 +17,7 @@ function Home() {
           <p>
             I am currently a graduate student at Portland State University, with
             an expected graduation date of June 2023 and a cumulative GPA of
-            3.9. During my academic tenure, I have gained valuable experience in
+            3.87. During my academic tenure, I have gained valuable experience in
             both front-end development and full-stack software engineering
             through my previous internships. I am a quick learner and have a
             passion for expanding my technological knowledge. Below is a summary
