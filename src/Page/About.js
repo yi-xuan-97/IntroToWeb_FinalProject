@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import pic1 from "../image/LC.png";
-import pic2 from "../image/ois.jpg";
+import pic2 from "../image/ois.png";
 import pic3 from "../image/cat.jpeg";
 
 const useStyles = makeStyles((theme) => ({
