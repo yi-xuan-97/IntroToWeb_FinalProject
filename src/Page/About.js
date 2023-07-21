@@ -87,7 +87,7 @@ function About() {
             Student Activities and Leadership Programs @PSU
           </Typography>
           <Typography className={classes.thirdHeading}>
-            Aug 2022 - Present
+            Aug 2022 - Jun 2023
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
