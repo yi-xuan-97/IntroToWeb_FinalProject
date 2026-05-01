@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
-import { useState } from "react";
 import { send } from "emailjs-com";
 import Button from "@material-ui/core/Button";
 import "../Style/Contact.css";
@@ -30,14 +29,22 @@ const useStyles = makeStyles((theme) => ({
     height: "10vh",
     marginLeft: "27%",
     marginTop: "2%",
-    display: "none",
   },
 }));
 
+// EmailJS configuration is read from environment variables. Set these in a
+// `.env` file at the project root (NOT committed to git):
+//   REACT_APP_EMAILJS_SERVICE_ID=service_xxx
+//   REACT_APP_EMAILJS_TEMPLATE_ID=template_xxx
+//   REACT_APP_EMAILJS_PUBLIC_KEY=xxxxxxxxxx
+const EMAILJS_SERVICE_ID  = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY  = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
 function Contact() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-  let myRef = React.createRef();
+  const [open, setOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [toSend, setToSend] = useState({
     name: "",
@@ -48,14 +55,14 @@ function Contact() {
   const onSubmit = (e) => {
     e.preventDefault();
     if (toSend.name !== "" && toSend.message !== "" && toSend.email !== "") {
-      send("service_0w2ygyt", "template_qc1gsvj", toSend, "OYzLiCCpownpUoTOW")
+      send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, toSend, EMAILJS_PUBLIC_KEY)
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
+          setShowSuccess(true);
         })
         .catch((err) => {
           console.log("FAILED...", err);
         });
-      myRef.current.style.display = "flex";
     } else {
       handleClickOpen();
     }
@@ -75,17 +82,23 @@ function Contact() {
 
   return (
     <div className="aboutContainer">
-      <Alert
-        severity="success"
-        variant="outlined"
-        id="form_alert"
-        className={classes.alert}
-        ref={myRef}
-      >
-        <AlertTitle>Success</AlertTitle>
-        Your message already sent to Yixuan's email —{" "}
-        <strong>Thank you!</strong>
-      </Alert>
+      {showSuccess && (
+        <Alert
+          severity="success"
+          variant="outlined"
+          id="form_alert"
+          className={classes.alert}
+        >
+          <AlertTitle>Success</AlertTitle>
+          Your message has been sent to Yixuan's email &mdash;{" "}
+          <strong>Thank you!</strong>
+        </Alert>
+      )}
+      <p className="contact_direct">
+        Prefer your own email client? Just write me at{" "}
+        <a href="mailto:ericafeng0@gmail.com">ericafeng0@gmail.com</a> &mdash;
+        or use the form below.
+      </p>
       <form className="about_form">
         <p className="welcome">Hello!! Nice to meet you!!!</p>
         <p>

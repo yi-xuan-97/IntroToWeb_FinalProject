@@ -4,6 +4,11 @@
   margin-bottom: 3%;
 }
 
+.resume_top {
+  margin-bottom: 24px;
+  text-align: right;
+}
+
 .work_img {
   width: 13vw;
   height: 13vw;

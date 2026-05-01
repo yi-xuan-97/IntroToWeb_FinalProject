@@ -1,3 +1,16 @@
+.contact_direct {
+  text-align: center;
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin: 24px auto 8px;
+  max-width: 600px;
+}
+.contact_direct a {
+  color: #557452;
+  font-weight: 600;
+}
+
 .about_form {
   text-align: center;
   margin: 2%;

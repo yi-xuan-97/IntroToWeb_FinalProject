@@ -26,12 +26,28 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  // Stylized media for the "this site" project (no real image asset)
+  siteMedia: {
+    height: 150,
+    background:
+      "linear-gradient(135deg, #fbf7ef 0%, #f4eedd 60%, #f4d5bd 100%)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontFamily: "'Shantell Sans', cursive",
+    fontSize: "42px",
+    color: "#557452",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    },
+  },
   title: {
     fontFamily: "Shantell Sans",
     fontSize: "30px",
   },
   detail: {
-    fontSize: "18px",
+    fontSize: "16px",
+    lineHeight: 1.55,
   },
 }));
 
@@ -41,17 +57,17 @@ function Project() {
   return (
     <div className="ProjectContainer">
       <Grid container spacing={2}>
-        <Grid item className="card" xs={12} sm={4}>
+        <Grid item className="card" xs={12} sm={6}>
           <Card className={classes.root}>
             <CardContent>
               <Typography gutterBottom variant="h2" className={classes.title}>
-                Jama software
+                Jama Connect ↔ Jira Extension
               </Typography>
             </CardContent>
             <CardMedia
               className={classes.media}
               image={pic1}
-              title="Front end"
+              title="Jama Connect / Jira Extension"
             />
             <CardContent>
               <Typography
@@ -60,42 +76,42 @@ function Project() {
                 className={classes.detail}
               >
                 <b>
-                  Work with local company Jama software to create a Jira Jama
+                  Capstone project — eight-person agile team partnering with
+                  local company Jama Software to build a Jira ↔ Jama Connect
                   extension.
                 </b>{" "}
-                Jama Jira Extension enables developers to browse Jama content on
-                Jira page. In this capacity, my primary responsibilities
-                included: interviewing the sponsor to determine detailed project
-                requirements, authoring user stories, and obtaining feedback
-                from the sponsor. I designed the extension's user interface and
-                user experience using Figma and developed front-end components
-                and pages for searching. I worked closely with the back-end team
-                to ensure seamless integration of the front-end and back-end
-                components.
+                The extension lets developers browse Jama content from Jira,
+                create cross-tool links, and sync user-defined fields. I
+                interviewed the sponsor to capture requirements, authored user
+                stories, designed the UI/UX in Figma, and developed frontend
+                search components in React. I worked closely with the back-end
+                team to keep front and back integrated.
               </Typography>
             </CardContent>
             <CardActions>
               <a
                 className="project_link"
                 href="https://github.com/CapstoneBitsPlease/JamaConnectFrontend"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Learn More
+                View on GitHub →
               </a>
             </CardActions>
           </Card>
         </Grid>
 
-        <Grid item className="card" xs={12} sm={4}>
+        <Grid item className="card" xs={12} sm={6}>
           <Card className={classes.root}>
             <CardContent>
               <Typography gutterBottom variant="h2" className={classes.title}>
-                C-Tran data Visualization
+                C-Tran Data Visualization
               </Typography>
             </CardContent>
             <CardMedia
               className={classes.media}
               image={pic2}
-              title="data visualization"
+              title="C-Tran data visualization"
             />
             <CardContent>
               <Typography
@@ -104,39 +120,41 @@ function Project() {
                 className={classes.detail}
               >
                 <b>
-                  Process raw data from a regional transit organization named
-                  C-Tran for visualizing its GPS breadcrumb data deviation and
-                  visualize it for analysis.{" "}
-                </b>
-                <br />
-                <br />
-                As part of my responsibilities, I performed data cleaning and
-                utilized Python Pandas and Seaborn to create statistical
-                visualizations of the GPS breadcrumb deviation. I analyzed these
-                visualizations to identify statistical results on GPS breadcrumb
-                deviation, and presented my findings in a final proposal to
-                C-Tran."
+                  Two-person team analyzing GPS breadcrumb data from a regional
+                  transit organization (C-Tran) to characterize position
+                  deviation.
+                </b>{" "}
+                I cleaned the raw data, built statistical visualizations in
+                Python with Pandas and Seaborn, analyzed the distribution and
+                magnitude of GPS deviation, and presented findings in a final
+                proposal back to C-Tran.
               </Typography>
             </CardContent>
             <CardActions>
               <a
                 className="project_link"
                 href="https://github.com/yi-xuan-97/C-Tran_PartB"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Learn More
+                View on GitHub →
               </a>
             </CardActions>
           </Card>
         </Grid>
 
-        <Grid item className="card" xs={12} sm={4}>
+        <Grid item className="card" xs={12} sm={6}>
           <Card className={classes.root}>
             <CardContent>
               <Typography gutterBottom variant="h2" className={classes.title}>
-                Android Device Application
+                Android Task Management App
               </Typography>
             </CardContent>
-            <CardMedia className={classes.media} image={pic3} title="Andoid" />
+            <CardMedia
+              className={classes.media}
+              image={pic3}
+              title="Android task management app"
+            />
             <CardContent>
               <Typography
                 variant="body1"
@@ -144,28 +162,63 @@ function Project() {
                 className={classes.detail}
               >
                 <b>
-                  The ultimate goal of this project is to create an Android
-                  application. To ensure best practices, the development process
-                  has been broken down into manageable steps.{" "}
-                </b>
-                For the back end section, develop a small RESTful Android
-                Application. Incrementally increase functionality, generate
-                integration test and unit test with 80% line coverage. For the
-                front end section, developing Android devices using some backend
-                code.{" "}
-                <b>
-                  In addition, work on a special project with Prof. David for
-                  creating a new application with a cloud storage-based Java
-                  backend and Android frontend
-                </b>
+                  Coursework project building an Android application
+                  incrementally over a term, with a strong testing focus.
+                </b>{" "}
+                I developed a small RESTful Android backend and grew its
+                functionality each milestone, generating integration and unit
+                tests with 80%+ line coverage. Then I built the Android
+                front-end on top. As an extra, I worked with Prof. David on a
+                cloud-storage-backed task manager with a Java backend and an
+                Android frontend.
               </Typography>
             </CardContent>
             <CardActions>
               <a
                 className="project_link"
                 href="https://github.com/yi-xuan-97/AndriodJavaTaskManagment"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Learn More
+                View on GitHub →
+              </a>
+            </CardActions>
+          </Card>
+        </Grid>
+
+        <Grid item className="card" xs={12} sm={6}>
+          <Card className={classes.root}>
+            <CardContent>
+              <Typography gutterBottom variant="h2" className={classes.title}>
+                This Personal Website
+              </Typography>
+            </CardContent>
+            <div className={classes.siteMedia}>{"{ erica.feng }"}</div>
+            <CardContent>
+              <Typography
+                variant="body1"
+                component="p"
+                className={classes.detail}
+              >
+                <b>
+                  The site you're on right now — my first React project, kept
+                  alive and gradually improved as I've grown.
+                </b>{" "}
+                Originally built as my Intro to Web Dev final project (React,
+                Material UI, React Router, EmailJS), it's been refactored to
+                modernize the routing, add a 404 page, move credentials out of
+                source, and refresh the content to reflect my current role at
+                Corteva. A perpetual side-project.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <a
+                className="project_link"
+                href="https://github.com/yi-xuan-97/IntroToWeb_FinalProject"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub →
               </a>
             </CardActions>
           </Card>

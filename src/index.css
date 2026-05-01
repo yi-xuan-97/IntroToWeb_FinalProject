@@ -1,3 +1,18 @@
+/* Tailwind CSS — loaded with preflight disabled (see tailwind.config.js) so
+   it coexists with Material UI on the rest of the site. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Re-add the ONE preflight rule we still need:
+   without this, every Tailwind border-* class silently fails because
+   Tailwind only sets border-width / -color, never border-style.
+   Browser default is `none` → invisible borders everywhere. */
+*, ::before, ::after {
+  border-style: solid;
+  border-width: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

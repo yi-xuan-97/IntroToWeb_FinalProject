@@ -1,0 +1,315 @@
+// Home.tailwind.reference.jsx
+// =============================================================================
+// "Warm Earthy Minimalism" — Home Page rewrite for Erica Feng
+//
+// Design system tokens used:
+//   bg          stone-50               (warm oat)
+//   surface     stone-100              (currently card, pill bg alt)
+//   border      stone-200
+//   text body   slate-700
+//   text deep   slate-900              (bold emphasis in bio)
+//   accent      emerald-800            (#2F5233-ish pine)
+//   accent fg   emerald-900            (text on tinted accent surface)
+//   accent bg   emerald-800/10         (skill pills, "currently" dot halo)
+//
+// Layout:
+//   Hero  — 12-col grid; photo md:col-span-5, bio md:col-span-7
+//   Skills — 6 categorized rows of pill badges
+//
+// Typography:
+//   font-display (Golos Text) for headings
+//   font-sans (Golos Text)    for body
+// =============================================================================
+
+import React, { useState } from "react";
+import { Download, Mail, MapPin, Check } from "lucide-react";
+import photo from "../image/photo.jpg";
+import { Pill, PillGroup } from "../components/Pill";
+
+const EMAIL = "ericafeng0@gmail.com";
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Skill data — single source of truth for the toolkit section
+// ─────────────────────────────────────────────────────────────────────────────
+const skillGroups = [
+  {
+    label: "Languages",
+    items: ["C#", "TypeScript", "JavaScript", "Java", "Python", "SQL", "HTML", "CSS", "C++", "C"],
+  },
+  {
+    label: "Backend",
+    items: [".NET 8", "ASP.NET", "Entity Framework", "OData", "REST APIs"],
+  },
+  {
+    label: "Frontend",
+    items: ["Angular 16", "React", "Next.js"],
+  },
+  {
+    label: "Testing",
+    items: ["SpecFlow (BDD/TDD)", "Playwright", "xUnit"],
+  },
+  {
+    label: "Cloud / DevOps",
+    items: ["Azure", "CI/CD pipelines", "Docker"],
+  },
+  {
+    label: "Data & Tools",
+    items: ["MS SQL Server", "Git", "Visual Studio", "VS Code", "Postman", "Jira", "Figma"],
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Currently card — small, quietly distinguished
+// ─────────────────────────────────────────────────────────────────────────────
+function CurrentlyCard() {
+  return (
+    <aside
+      className="mt-2 rounded-xl border border-stone-200 bg-stone-100 p-5"
+      aria-label="What I'm currently working on"
+    >
+      <div className="mb-2 flex items-center gap-2">
+        {/* Pulsing dot — subtly signals "this is live / right now" */}
+        <span className="relative flex h-2 w-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-700 opacity-60" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-700" />
+        </span>
+        <span className="text-xs font-semibold uppercase tracking-widest text-emerald-800">
+          Currently
+        </span>
+      </div>
+      <p className="text-[15px] leading-relaxed text-slate-700">
+        Deepening BDD/TDD with SpecFlow, helping migrate our team to a new
+        Azure tenant, and slowly making this site nicer.
+      </p>
+    </aside>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  CTA buttons — primary filled, secondary outline
+// ─────────────────────────────────────────────────────────────────────────────
+function CTAs() {
+  // mailto: links silently fail when the user has no default mail client
+  // configured (very common in 2025+ since most people use webmail). So we
+  // ALSO copy the email to clipboard on click, and show a brief "Copied!"
+  // confirmation. This way the user always walks away with the address.
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* navigator.clipboard not available — mailto: still tries to fire */
+    }
+    // We do NOT preventDefault — let the mailto: open the user's mail client
+    // if they have one. The click-to-copy is a defense in depth, not a replacement.
+  };
+
+  return (
+    // No internal padding — vertical spacing is handled by parent's mt-*
+    // so the button row's left edge aligns flush with sibling components.
+    <div className="flex flex-wrap items-center gap-3">
+      <a
+        href="/Erica_Feng_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 rounded-xl bg-emerald-800
+                   px-5 py-3 text-sm font-semibold text-white
+                   shadow-sm shadow-emerald-900/20
+                   transition-all duration-200
+                   hover:bg-emerald-900 hover:shadow-md
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800/40"
+      >
+        <Download className="h-4 w-4" strokeWidth={2} />
+        Download Résumé (PDF)
+      </a>
+      <a
+        href={`mailto:${EMAIL}`}
+        onClick={handleEmailClick}
+        aria-label={
+          copied
+            ? `Email address ${EMAIL} copied to clipboard`
+            : `Email me at ${EMAIL}`
+        }
+        className="inline-flex items-center gap-2 rounded-xl
+                   border-2 border-emerald-800 bg-transparent
+                   px-5 py-3 text-sm font-semibold text-emerald-800
+                   transition-colors duration-200
+                   hover:bg-emerald-800/5
+                   focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800/40"
+      >
+        {copied ? (
+          <>
+            <Check className="h-4 w-4" strokeWidth={2.5} />
+            Copied {EMAIL}
+          </>
+        ) : (
+          <>
+            <Mail className="h-4 w-4" strokeWidth={2} />
+            Email Me
+          </>
+        )}
+      </a>
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Skills section — pill badges grouped by category
+// ─────────────────────────────────────────────────────────────────────────────
+function SkillsSection() {
+  return (
+    <section className="border-t border-stone-200 bg-stone-50 py-16 md:py-20">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-800">
+          / Toolkit
+        </p>
+        <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          What I work with
+        </h2>
+        <p className="mt-3 max-w-2xl text-slate-600">
+          A grouped view of the tech I use day-to-day, plus what I've kept
+          sharp from earlier projects.
+        </p>
+
+        <div className="mt-10 space-y-6">
+          {skillGroups.map((group) => (
+            <div
+              key={group.label}
+              // Flex layout (not grid) — label has fixed width (w-36 = 144px),
+              // pills take whatever's left and sit RIGHT NEXT to label.
+              // No giant whitespace gap like grid-cols-2 would create.
+              className="flex flex-col gap-3 md:flex-row md:items-baseline md:gap-5"
+            >
+              {/* Category label — slate-600 + text-sm + tracking-wider
+                  reads as a confident anchor, not a faded hint. */}
+              <h3
+                className="md:w-36 md:flex-shrink-0
+                           text-sm font-semibold uppercase tracking-wider
+                           text-slate-600"
+              >
+                {group.label}
+              </h3>
+
+              {/* Pill badges — uses shared component for cross-page consistency */}
+              <PillGroup>
+                {group.items.map((item) => (
+                  <Pill key={item}>{item}</Pill>
+                ))}
+              </PillGroup>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Main Home page
+// ─────────────────────────────────────────────────────────────────────────────
+export default function Home() {
+  return (
+    <main className="bg-stone-50 font-sans text-slate-700 text-left">
+      {/* Hero */}
+      <section className="px-5 sm:px-8">
+        <div className="mx-auto max-w-5xl py-16 md:py-24">
+          <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+
+            {/* — Photo column — */}
+            <div className="md:col-span-5">
+              <div className="relative">
+                <img
+                  src={photo}
+                  alt="Erica Feng"
+                  className="w-full max-h-80 md:max-h-none md:aspect-[4/5]
+                             rounded-2xl object-cover object-top
+                             shadow-2xl shadow-emerald-900/15"
+                />
+                {/* Soft outer ring — ties photo to design system color */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 rounded-2xl
+                             ring-1 ring-inset ring-stone-900/5"
+                />
+              </div>
+
+              {/* Location pin — small editorial detail under photo */}
+              <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500">
+                <MapPin className="h-3.5 w-3.5" strokeWidth={2} />
+                Johnston, Iowa
+              </p>
+            </div>
+
+            {/* — Bio + Currently + CTAs column —
+                Explicit flex-col + items-start ensures predictable vertical
+                stacking. Each child uses mt-* for spacing instead of relying
+                on space-y-* + browser default <p> margins (which conflict
+                because preflight is disabled in tailwind.config.js). */}
+            <div className="md:col-span-7 flex flex-col items-start">
+              {/* Eyebrow */}
+              <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700">
+                Hi there
+              </p>
+
+              {/* Headline */}
+              <h1
+                className="m-0 mt-3 font-display text-4xl font-bold tracking-tight
+                           text-slate-900 md:text-5xl
+                           leading-[1.15]"
+              >
+                I&rsquo;m Erica Feng.
+              </h1>
+
+              {/* Bio — explicit m-0 on each <p> kills browser default margins.
+                  Bold + slate-900 for keyword emphasis (no italics per spec). */}
+              <p className="m-0 mt-6 text-base leading-[1.75] text-slate-700 md:text-[17px]">
+                I&rsquo;m a full-stack developer based in Johnston, Iowa,
+                currently working as a contractor at{" "}
+                <strong className="font-semibold text-slate-900">
+                  Corteva Agriscience
+                </strong>
+                . Day-to-day, I ship{" "}
+                <strong className="font-semibold text-slate-900">.NET 8</strong>{" "}
+                REST APIs and{" "}
+                <strong className="font-semibold text-slate-900">
+                  Angular 16
+                </strong>{" "}
+                features in an agile, BDD-driven team &mdash; and write the{" "}
+                <strong className="font-semibold text-slate-900">SpecFlow</strong>{" "}
+                and{" "}
+                <strong className="font-semibold text-slate-900">Playwright</strong>{" "}
+                tests to back them up.
+              </p>
+
+              <p className="m-0 mt-5 text-base leading-[1.75] text-slate-700 md:text-[17px]">
+                I&rsquo;m a quick learner who picks up new things both in
+                code and out of it: this same site started as my first React
+                project in 2023 and has grown alongside me. When I&rsquo;m
+                not debugging or optimizing queries, you can usually find me
+                walking the trails around Johnston or hanging out with my
+                rescue cat,{" "}
+                <strong className="font-semibold text-slate-900">Luba</strong>.
+              </p>
+
+              {/* Currently card — w-full ensures it fills column for left-edge alignment */}
+              <div className="mt-8 w-full">
+                <CurrentlyCard />
+              </div>
+
+              {/* CTAs — flush left, same edge as Currently card above */}
+              <div className="mt-6">
+                <CTAs />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <SkillsSection />
+    </main>
+  );
+}

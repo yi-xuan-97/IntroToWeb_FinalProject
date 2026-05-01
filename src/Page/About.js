@@ -72,13 +72,19 @@ function About() {
   return (
     <div className="aboutContainer">
       <h1 className="about_title">
-        Now that you know me enough from my CS related experince
+        Now that you know me enough from my CS-related experience —
+        here's everything else.
       </h1>
+      <p className="about_intro">
+        A non-comprehensive list of things I've picked up alongside the
+        code: organizing events, mentoring people, accommodating exam
+        needs, grading Java, cooking. Click any title to expand.
+      </p>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-ois-content"
+          id="panel-ois-header"
         >
           <Typography className={classes.heading}>
             Organization of International Students Coordinator
@@ -101,14 +107,21 @@ function About() {
             />
           </a>
           <Typography className={classes.detail}>
-            Collaborating with fellow OIS coordinators, I help organize and host
-            various cultural events for international students, such as Culture
-            Night, Lunar New Year Event, Halloween Party, Game Night, and Movie
-            Night. These events offer an excellent opportunity for individuals
-            who are interested in exploring diverse cultures or are
-            international students themselves to participate and engage in a
-            vibrant community. We encourage you to follow us on Instagram and
-            join us in these exciting events.
+            Collaborated with fellow OIS coordinators to organize and host
+            cultural events for international students &mdash; Culture Night,
+            Lunar New Year, Halloween Party, Game Night, Movie Night. I led the
+            <b> food section</b> for our largest event, <b>International Night</b>
+            (300+ attendees): worked with university advisors on documents and
+            menu design, planned room layouts to meet fire code, and coordinated
+            with the local department for food safety inspections. I also
+            learned, the hard way, that you need at least <i>two buckets of
+            water</i> for hand-washing at a public food event &mdash; I will
+            never forget this.
+            <br />
+            <br />
+            As part of the role, I was also paid to attend a leadership class
+            and earned a <b>leadership certification</b> at the end. Walked away
+            with a much healthier respect for spreadsheets.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -116,8 +129,8 @@ function About() {
       <Accordion className={classes.section}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
+          aria-controls="panel-testing-content"
+          id="panel-testing-header"
         >
           <Typography className={classes.heading}>
             Testing Services Office Assistant
@@ -140,16 +153,14 @@ function About() {
             />
           </a>
           <Typography className={classes.detail}>
-            PSU Testing Services provides accommodated testing support for PSU
-            students registered with the Disability Resource Center (DRC), as
-            well as for their instructors. <br />
-            As the Testing Services Office Assistant, my primary responsibility
-            is to facilitate exam requests and scheduling for students with
-            accommodations and instructors with specific requirements. I
-            maintain regular communication with both parties to ensure that any
-            updates or changes are addressed promptly. Given the highly
-            confidential nature of our work, we take great care to minimize the
-            risk of human error.
+            PSU Testing Services provides accommodated testing support for
+            students registered with the <b>Disability Resource Center (DRC)</b>
+            and their instructors. As the office assistant I scheduled exams,
+            handled requests across departments, and adapted workflows for
+            students who needed extra time, separate rooms, or different
+            setups. The work is confidential and detail-heavy &mdash; one
+            mis-scheduled exam ripples through three calendars &mdash; so I
+            learned to triple-check everything before sending it.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -157,8 +168,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-proctor-content"
+          id="panel-proctor-header"
         >
           <Typography className={classes.heading}>Exam Proctor</Typography>
           <Typography className={classes.secondaryHeading}>
@@ -180,8 +191,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-grader-content"
+          id="panel-grader-header"
         >
           <Typography className={classes.heading}>
             Grader for Advanced Programming in Java
@@ -195,10 +206,11 @@ function About() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.detail}>
-            Due to my exceptional performance in advanced Java programming, I
-            was invited by the instructor to become a grader. As a grader, I am
-            responsible for evaluating projects, quizzes, and exams, as well as
-            addressing related questions.
+            The instructor invited me to grade after I did well in the course.
+            As a grader I evaluated projects, quizzes, and exams, gave students
+            feedback on their code, and answered questions on programming
+            concepts and debugging. Turns out I'm pretty good at explaining why
+            someone's loop is off-by-one.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -206,8 +218,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-mentor-content"
+          id="panel-mentor-header"
         >
           <Typography className={classes.heading}>
             International student Mentor
@@ -225,17 +237,16 @@ function About() {
             <FontAwesomeIcon className={classes.icon} icon={faInstagram} />
           </a>
           <Typography className={classes.detail}>
-            As an international student mentor, my role is to provide guidance
-            and support to students who are in their first term at PSU. This
-            includes assisting them with their transition to a new country and
-            culture, helping them navigate the academic system, and offering
-            advice and support on personal and social issues. I may also
-            organize social and cultural events to help students build
-            connections and feel more integrated into their new community, and
-            facilitate communication between students and university staff.
-            Through my work, I contribute to the success and well-being of
-            international students, helping them to thrive academically and
-            personally during their time abroad.
+            Mentored newly-arrived international students in their first term
+            at PSU &mdash; helping them navigate a new country, the academic
+            system, and life on the ground. Sent <b>weekly check-in emails</b>
+            with helpful info and small "things I like in Portland" notes; some
+            students wrote back, some didn't. The real bonding happened in
+            person: I led <b>campus tours</b>, ran light walking tours of
+            downtown when there was an event, and showed up at orientation
+            programs. Once you've actually met someone, the emails get answered
+            faster &mdash; turns out in-person breaks the ice in a way email
+            never quite does.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -243,8 +254,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-cat-content"
+          id="panel-cat-header"
         >
           <Typography className={classes.heading}>
             Desk Operations Group Volunteer
@@ -286,8 +297,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-cook-content"
+          id="panel-cook-header"
         >
           <Typography className={classes.heading}>Great Cook</Typography>
           <Typography className={classes.secondaryHeading}></Typography>
@@ -306,8 +317,8 @@ function About() {
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel-walk-content"
+          id="panel-walk-header"
         >
           <Typography className={classes.heading}>
             Perfect partner for a walk
