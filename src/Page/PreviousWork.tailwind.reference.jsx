@@ -80,24 +80,23 @@ const jobs = [
   {
     role: "Software Engineer Intern",
     company: "Swedemom",
-    meta: "Remote",
+    meta: "Remote · 1-month engagement",
     dates: "Jul 2021 — Aug 2021",
     bullets: [
-      "Tuned SQL queries against the C# / SQL Server backend to improve on-site product search performance. {{TODO: metric — query time reduction}}",
-      "Resolved database connection issues affecting site responsiveness. {{TODO: metric — # of bugs fixed or % timeouts reduced}}",
+      "Diagnosed a database connection misconfiguration on a small e-commerce team — the site was pointed at the wrong SQL Server instance, returning stale data to the search experience. Repointing restored correct product results with no application code change.",
+      "Wrote SQL queries against the C# / SQL Server backend to power the on-site product search.",
     ],
     stack: ["C#", "SQL", "SQL Server"],
   },
   {
-    role: "Full-Stack Software Engineer Intern",
+    role: "Software Engineer Intern",
     company: "Relaymile",
     meta: "Remote",
     dates: "Apr 2021 — Jul 2021",
     bullets: [
-      "Built 1 new page and shipped 5 feature additions to the Relaymile site in React, HTML, and CSS within a Scrum team.",
-      "Created and updated backend routes; adjusted Python data models alongside full-stack teammates. {{TODO: metric — # of routes / models}}",
+      "Shipped 2–3 Python backend endpoints for the Relaymile platform; iterated on the data models alongside full-stack teammates within a Scrum team.",
     ],
-    stack: ["React", "Python", "Docker", "Postman", "Asana"],
+    stack: ["Python", "Docker", "Postman", "Asana"],
   },
   {
     role: "Web Development Intern",
