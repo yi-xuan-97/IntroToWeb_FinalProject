@@ -22,8 +22,8 @@
 // =============================================================================
 
 import React, { useState } from "react";
-import { Download, Mail, MapPin, Check } from "lucide-react";
-import photo from "../image/photo.jpg";
+import { Download, Mail, Check } from "lucide-react";
+import photo from "../image/IMG_7919.JPG";
 import { Pill, PillGroup } from "../components/Pill";
 import { usePageMeta } from "../hooks/usePageMeta";
 // import { Testimonials } from "../components/Testimonials";  // ← uncomment once you have quotes
@@ -36,11 +36,11 @@ const EMAIL = "ericafeng0@gmail.com";
 const AVAILABILITY = "Open to: Full-time SWE roles · Remote";
 
 // Privacy toggle for the active job-search window.
-// When true: hero shows the photo + "Johnston, Iowa" location pin.
-// When false: photo + location are hidden, bio fills the row alone.
-// Flip back to true once I'm no longer worried about a current coworker
-// stumbling onto the site (e.g. after I've left the contractor role).
-const SHOW_PHOTO = false;
+// When true: hero shows the sunglasses+beanie photo (face partially obscured).
+// When false: photo is hidden, bio fills the row alone.
+// Currently true because IMG_7919 hides eyes + hair color — adds the visual
+// disguise on top of the noindex meta tag and "Yixuan" rebrand.
+const SHOW_PHOTO = true;
 
 // Testimonials data — populate when you have 1-2 manager / teammate quotes,
 // then uncomment the import above and the <Testimonials /> placement below.
@@ -253,15 +253,19 @@ export default function Home() {
               with max-w-2xl so the prose stays at a comfortable read width. */}
           <div className={SHOW_PHOTO ? "grid gap-10 md:grid-cols-12 md:gap-14" : ""}>
 
-            {/* — Photo column (privacy toggle) — */}
+            {/* — Photo column (privacy toggle) —
+                IMG_7919 is a landscape photo (face roughly centered).
+                aspect-[4/5] target portrait, so object-cover crops the
+                left/right edges; subject stays in frame. object-center
+                (default) keeps the face centered horizontally. */}
             {SHOW_PHOTO && (
               <div className="md:col-span-5">
                 <div className="relative">
                   <img
                     src={photo}
-                    alt="Yixuan on the Brooklyn Bridge"
+                    alt="Portrait of Yixuan in sunglasses by a mountain lake"
                     className="w-full max-h-80 md:max-h-none md:aspect-[4/5]
-                               rounded-2xl object-cover object-top
+                               rounded-2xl object-cover object-center
                                shadow-2xl shadow-emerald-900/15"
                   />
                   {/* Soft outer ring — ties photo to design system color */}
@@ -271,12 +275,7 @@ export default function Home() {
                                ring-1 ring-inset ring-stone-900/5"
                   />
                 </div>
-
-                {/* Location pin — small editorial detail under photo */}
-                <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500 dark:text-stone-400">
-                  <MapPin className="h-3.5 w-3.5" strokeWidth={2} />
-                  Johnston, Iowa
-                </p>
+                {/* Location pin removed — privacy decision (was "Johnston, Iowa") */}
               </div>
             )}
 
