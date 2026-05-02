@@ -1,0 +1,132 @@
+<!--
+  og-image-template.html
+  =======================================================================
+  HOW TO USE:
+  1. Open this file in your browser (drag into Chrome, or run the dev
+     server and navigate to /og-image-template.html).
+  2. Open DevTools → Device Toolbar (Cmd+Shift+M / Ctrl+Shift+M).
+  3. Set viewport to exactly 1200 × 630 (custom size).
+  4. Take a full-screenshot via DevTools (Cmd+Shift+P → "Capture screenshot")
+     OR use a screenshot tool that lets you crop to 1200×630.
+  5. Save as `public/og-image.png` (overwrite if it exists).
+  6. Done — LinkedIn / Slack / iMessage previews will render this image.
+
+  Edit the headline / tagline / accent color below to taste.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OG Image Template — Erica Feng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Golos+Text:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fbf7ef;
+        --accent: #2f5233;
+        --ink: #1a1816;
+        --muted: #4a463e;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Golos Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        overflow: hidden;
+      }
+      .canvas {
+        width: 1200px;
+        height: 630px;
+        position: relative;
+        background: radial-gradient(
+            ellipse at 80% 20%,
+            #f4d5bd 0%,
+            transparent 60%
+          ),
+          radial-gradient(ellipse at 10% 90%, #fdebc8 0%, transparent 50%),
+          var(--bg);
+        padding: 88px 96px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+      }
+      .kicker {
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 36px;
+      }
+      h1 {
+        font-family: "Outfit", sans-serif;
+        font-weight: 800;
+        font-size: 116px;
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+        margin: 0 0 28px;
+        color: var(--ink);
+      }
+      h1 .accent {
+        color: var(--accent);
+      }
+      .tagline {
+        font-family: "Outfit", sans-serif;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 1.35;
+        color: var(--muted);
+        max-width: 920px;
+        margin: 0;
+      }
+      .badge {
+        position: absolute;
+        bottom: 64px;
+        right: 96px;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: white;
+        border: 1px solid #e2d8c2;
+        border-radius: 999px;
+        padding: 10px 20px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--accent);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      }
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        background: #15803d;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="canvas">
+      <div class="kicker">/ Hello there</div>
+      <h1>
+        Erica Feng<span class="accent">.</span>
+      </h1>
+      <p class="tagline">
+        Full-stack engineer who ships features and the tests behind them.
+        <br />.NET 8 + Angular 16 at Corteva Agriscience.
+      </p>
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Open to: Full-time SWE roles · Iowa or Remote
+      </div>
+    </div>
+  </body>
+</html>

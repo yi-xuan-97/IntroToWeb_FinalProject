@@ -4,6 +4,11 @@ module.exports = {
   // production builds would purge most classes and break the page.
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
 
+  // Class-based dark mode: the user's <html> gets a `dark` class added
+  // either by the toggle (manual override) or by the OS preference (default).
+  // See src/hooks/useDarkMode.js for the management logic.
+  darkMode: "class",
+
   // Disable preflight so Tailwind's CSS reset doesn't fight with Material UI's
   // CssBaseline (used by NavBar) and the existing site's `<ul>`/`<h1>` styling
   // on Home / Resume / Project pages. The Tailwind-styled About page sets

@@ -14,6 +14,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Pill, PillGroup } from "../components/Pill";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const projects = [
   {
@@ -41,11 +42,11 @@ const projects = [
     githubUrl: "https://github.com/yi-xuan-97/AndriodJavaTaskManagment",
   },
   {
-    tag: "Ongoing",
-    title: "This Personal Website",
+    tag: "AI Pair Programming · 2026",
+    title: "This site — refactored with Gemini & Claude",
     description:
-      "The site you're on right now — my first React project, kept alive and gradually improved as I've grown. Originally built as my Intro to Web Dev final project; now a living testbed for design system work in Tailwind, accessibility tweaks, and modern React patterns.",
-    stack: ["React", "Tailwind CSS", "React Router", "EmailJS", "Lucide Icons"],
+      "A live demonstration of how quickly I can pick up new tech: I refactored my 2023 Intro-to-Web React project end-to-end using Gemini and Claude as AI pair programmers. Migrated the design system from Material UI v4 to a Tailwind CSS \"Warm Earthy Minimalism\" system, built a shared Pill component used across three pages, restructured Resume into a vertical timeline, hardened accessibility (focus rings, aria-expanded, semantic landmarks), and fixed a sneaky Tailwind preflight-disabled bug that was making every border invisible site-wide. The site you're reading is the artifact.",
+    stack: ["React", "Tailwind CSS", "lucide-react", "AI pair programming", "Design Systems", "a11y"],
     githubUrl: "https://github.com/yi-xuan-97/IntroToWeb_FinalProject",
   },
 ];
@@ -53,13 +54,13 @@ const projects = [
 function ProjectCard({ project }) {
   return (
     <article
-      className="rounded-2xl bg-white p-7
-                 border border-stone-200/60
+      className="rounded-2xl bg-white dark:bg-stone-800 p-7
+                 border border-stone-200/60 dark:border-stone-700/60
                  shadow-sm transition-all duration-200
                  hover:shadow-md hover:-translate-y-0.5"
     >
       {/* Tag — small label up top, signals project context (capstone / data / etc.) */}
-      <p className="m-0 text-xs font-semibold uppercase tracking-wider text-emerald-700">
+      <p className="m-0 text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
         {project.tag}
       </p>
 
@@ -68,13 +69,13 @@ function ProjectCard({ project }) {
         className="m-0 mt-2 font-display
                    text-xl md:text-[22px]
                    font-bold tracking-tight leading-snug
-                   text-slate-900"
+                   text-slate-900 dark:text-stone-100"
       >
         {project.title}
       </h3>
 
       {/* Description — straight prose, no italics for the body */}
-      <p className="m-0 mt-3 text-[15px] leading-relaxed text-slate-700">
+      <p className="m-0 mt-3 text-[15px] leading-relaxed text-slate-700 dark:text-stone-200">
         {project.description}
       </p>
 
@@ -95,7 +96,7 @@ function ProjectCard({ project }) {
         rel="noopener noreferrer"
         className="group mt-6 inline-flex items-center gap-1.5
                    text-sm font-semibold
-                   text-emerald-700 hover:text-emerald-900
+                   text-emerald-700 dark:text-emerald-400 hover:text-emerald-900
                    transition-colors duration-150
                    focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800/30 rounded"
       >
@@ -111,23 +112,29 @@ function ProjectCard({ project }) {
 }
 
 export default function Project() {
+  usePageMeta({
+    title: "Projects",
+    description:
+      "Selected projects by Erica Feng — Jama Connect / Jira capstone in React, C-Tran GPS data visualization in Python, an Android task app in Java, and an ongoing AI-assisted Tailwind redesign of this site.",
+  });
+
   return (
-    <main className="bg-stone-50 font-sans text-slate-700 text-left">
+    <main className="bg-stone-50 dark:bg-stone-900 font-sans text-slate-700 dark:text-stone-200 text-left transition-colors">
       <div className="mx-auto max-w-5xl px-5 sm:px-8 py-16 md:py-20">
         {/* Page header */}
         <header className="mb-12">
-          <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700">
+          <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
             / Selected work
           </p>
           <h1
             className="m-0 mt-3 font-display
                        text-4xl md:text-5xl
                        font-bold tracking-tight leading-[1.15]
-                       text-slate-900"
+                       text-slate-900 dark:text-stone-100"
           >
             Things I&rsquo;ve built.
           </h1>
-          <p className="m-0 mt-5 max-w-2xl text-slate-500 leading-relaxed">
+          <p className="m-0 mt-5 max-w-2xl text-slate-500 dark:text-stone-400 leading-relaxed">
             A mix of capstone work, coursework, and ongoing side projects.
             Each card has a stack at a glance and a link to source.
           </p>

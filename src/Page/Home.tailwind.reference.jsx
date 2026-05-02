@@ -25,8 +25,26 @@ import React, { useState } from "react";
 import { Download, Mail, MapPin, Check } from "lucide-react";
 import photo from "../image/photo.jpg";
 import { Pill, PillGroup } from "../components/Pill";
+import { usePageMeta } from "../hooks/usePageMeta";
+// import { Testimonials } from "../components/Testimonials";  // ← uncomment once you have quotes
 
 const EMAIL = "ericafeng0@gmail.com";
+
+// Configurable availability text — change in one place to update site-wide.
+// When you accept an offer: swap to "Recently joined X 🎉" or set to null
+// to hide the badge entirely.
+const AVAILABILITY = "Open to: Full-time SWE roles · Iowa or Remote";
+
+// Testimonials data — populate when you have 1-2 manager / teammate quotes,
+// then uncomment the import above and the <Testimonials /> placement below.
+// Each item: { quote: string, name: string, role?: string }.
+// const TESTIMONIALS = [
+//   {
+//     quote: "Erica picks up unfamiliar code faster than anyone I've onboarded.",
+//     name: "Jane Doe",
+//     role: "Tech Lead, Corteva Agriscience",
+//   },
+// ];
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  Skill data — single source of truth for the toolkit section
@@ -64,7 +82,7 @@ const skillGroups = [
 function CurrentlyCard() {
   return (
     <aside
-      className="mt-2 rounded-xl border border-stone-200 bg-stone-100 p-5"
+      className="mt-2 rounded-xl border border-stone-200 dark:border-stone-700 bg-stone-100 dark:bg-stone-800/60 p-5"
       aria-label="What I'm currently working on"
     >
       <div className="mb-2 flex items-center gap-2">
@@ -73,13 +91,14 @@ function CurrentlyCard() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-700 opacity-60" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-700" />
         </span>
-        <span className="text-xs font-semibold uppercase tracking-widest text-emerald-800">
+        <span className="text-xs font-semibold uppercase tracking-widest text-emerald-800 dark:text-emerald-400">
           Currently
         </span>
       </div>
-      <p className="text-[15px] leading-relaxed text-slate-700">
+      <p className="text-[15px] leading-relaxed text-slate-700 dark:text-stone-200">
         Deepening BDD/TDD with SpecFlow, helping migrate our team to a new
-        Azure tenant, and slowly making this site nicer.
+        Azure tenant, and rebuilding this site&rsquo;s design system in
+        Tailwind with Gemini &amp; Claude as pair programmers.
       </p>
     </aside>
   );
@@ -134,10 +153,10 @@ function CTAs() {
             : `Email me at ${EMAIL}`
         }
         className="inline-flex items-center gap-2 rounded-xl
-                   border-2 border-emerald-800 bg-transparent
-                   px-5 py-3 text-sm font-semibold text-emerald-800
+                   border-2 border-emerald-800 dark:border-emerald-400 bg-transparent
+                   px-5 py-3 text-sm font-semibold text-emerald-800 dark:text-emerald-400
                    transition-colors duration-200
-                   hover:bg-emerald-800/5
+                   hover:bg-emerald-800/5 dark:hover:bg-emerald-400/10
                    focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800/40"
       >
         {copied ? (
@@ -161,15 +180,15 @@ function CTAs() {
 // ─────────────────────────────────────────────────────────────────────────────
 function SkillsSection() {
   return (
-    <section className="border-t border-stone-200 bg-stone-50 py-16 md:py-20">
+    <section className="border-t border-stone-200 dark:border-stone-700 bg-stone-50 dark:bg-stone-900 py-16 md:py-20">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-800">
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-800 dark:text-emerald-400">
           / Toolkit
         </p>
-        <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+        <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-900 dark:text-stone-100 md:text-4xl">
           What I work with
         </h2>
-        <p className="mt-3 max-w-2xl text-slate-600">
+        <p className="mt-3 max-w-2xl text-slate-600 dark:text-stone-300">
           A grouped view of the tech I use day-to-day, plus what I've kept
           sharp from earlier projects.
         </p>
@@ -188,7 +207,7 @@ function SkillsSection() {
               <h3
                 className="md:w-36 md:flex-shrink-0
                            text-sm font-semibold uppercase tracking-wider
-                           text-slate-600"
+                           text-slate-600 dark:text-stone-300"
               >
                 {group.label}
               </h3>
@@ -211,8 +230,14 @@ function SkillsSection() {
 //  Main Home page
 // ─────────────────────────────────────────────────────────────────────────────
 export default function Home() {
+  usePageMeta({
+    title: "Erica Feng — Full Stack Developer",
+    description:
+      "Full-stack engineer who ships features and the tests behind them. .NET 8 + Angular 16 by day at Corteva Agriscience. Based in Iowa, open to full-time SWE roles.",
+  });
+
   return (
-    <main className="bg-stone-50 font-sans text-slate-700 text-left">
+    <main className="bg-stone-50 dark:bg-stone-900 font-sans text-slate-700 dark:text-stone-200 text-left transition-colors">
       {/* Hero */}
       <section className="px-5 sm:px-8">
         <div className="mx-auto max-w-5xl py-16 md:py-24">
@@ -223,7 +248,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   src={photo}
-                  alt="Erica Feng"
+                  alt="Erica Feng on the Brooklyn Bridge"
                   className="w-full max-h-80 md:max-h-none md:aspect-[4/5]
                              rounded-2xl object-cover object-top
                              shadow-2xl shadow-emerald-900/15"
@@ -237,7 +262,7 @@ export default function Home() {
               </div>
 
               {/* Location pin — small editorial detail under photo */}
-              <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500">
+              <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500 dark:text-stone-400">
                 <MapPin className="h-3.5 w-3.5" strokeWidth={2} />
                 Johnston, Iowa
               </p>
@@ -250,48 +275,48 @@ export default function Home() {
                 because preflight is disabled in tailwind.config.js). */}
             <div className="md:col-span-7 flex flex-col items-start">
               {/* Eyebrow */}
-              <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700">
+              <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
                 Hi there
               </p>
 
-              {/* Headline */}
+              {/* Headline — name only */}
               <h1
                 className="m-0 mt-3 font-display text-4xl font-bold tracking-tight
-                           text-slate-900 md:text-5xl
+                           text-slate-900 dark:text-stone-100 md:text-5xl
                            leading-[1.15]"
               >
                 I&rsquo;m Erica Feng.
               </h1>
 
-              {/* Bio — explicit m-0 on each <p> kills browser default margins.
-                  Bold + slate-900 for keyword emphasis (no italics per spec). */}
-              <p className="m-0 mt-6 text-base leading-[1.75] text-slate-700 md:text-[17px]">
-                I&rsquo;m a full-stack developer based in Johnston, Iowa,
-                currently working as a contractor at{" "}
-                <strong className="font-semibold text-slate-900">
+              {/* Positioning tagline — sub-heading establishing role + stack
+                  + employer in a single scannable line. Outfit (font-display)
+                  at medium weight gives it a distinct typographic moment. */}
+              <p
+                className="m-0 mt-4 font-display text-lg md:text-xl
+                           font-medium leading-snug text-slate-700 dark:text-stone-200"
+              >
+                Full-stack engineer who ships features and the tests behind
+                them.{" "}
+                <strong className="font-semibold text-slate-900 dark:text-stone-100">
+                  .NET 8 + Angular 16
+                </strong>{" "}
+                by day at{" "}
+                <strong className="font-semibold text-slate-900 dark:text-stone-100">
                   Corteva Agriscience
                 </strong>
-                . Day-to-day, I ship{" "}
-                <strong className="font-semibold text-slate-900">.NET 8</strong>{" "}
-                REST APIs and{" "}
-                <strong className="font-semibold text-slate-900">
-                  Angular 16
-                </strong>{" "}
-                features in an agile, BDD-driven team &mdash; and write the{" "}
-                <strong className="font-semibold text-slate-900">SpecFlow</strong>{" "}
-                and{" "}
-                <strong className="font-semibold text-slate-900">Playwright</strong>{" "}
-                tests to back them up.
+                .
               </p>
 
-              <p className="m-0 mt-5 text-base leading-[1.75] text-slate-700 md:text-[17px]">
+              {/* Personal bio — the tagline now carries the role/stack facts,
+                  so this paragraph focuses purely on personality. */}
+              <p className="m-0 mt-6 text-base leading-[1.75] text-slate-700 dark:text-stone-200 md:text-[17px]">
                 I&rsquo;m a quick learner who picks up new things both in
                 code and out of it: this same site started as my first React
                 project in 2023 and has grown alongside me. When I&rsquo;m
                 not debugging or optimizing queries, you can usually find me
                 walking the trails around Johnston or hanging out with my
                 rescue cat,{" "}
-                <strong className="font-semibold text-slate-900">Luba</strong>.
+                <strong className="font-semibold text-slate-900 dark:text-stone-100">Luba</strong>.
               </p>
 
               {/* Currently card — w-full ensures it fills column for left-edge alignment */}
@@ -299,8 +324,29 @@ export default function Home() {
                 <CurrentlyCard />
               </div>
 
-              {/* CTAs — flush left, same edge as Currently card above */}
-              <div className="mt-6">
+              {/* Availability badge — pulsing-dot chip signaling job-search status.
+                  Hidden if AVAILABILITY constant is null. */}
+              {AVAILABILITY && (
+                <div className="mt-6">
+                  <span
+                    className="inline-flex items-center gap-2 rounded-full
+                               border border-emerald-200/70 bg-emerald-50/80
+                               dark:border-emerald-400/40 dark:bg-emerald-400/15
+                               px-3 py-1.5"
+                  >
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-600 dark:bg-emerald-300 opacity-60" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-600 dark:bg-emerald-300" />
+                    </span>
+                    <span className="text-xs font-semibold tracking-wide text-emerald-800 dark:text-emerald-200">
+                      {AVAILABILITY}
+                    </span>
+                  </span>
+                </div>
+              )}
+
+              {/* CTAs — flush left, same edge as cards/badge above */}
+              <div className="mt-4">
                 <CTAs />
               </div>
             </div>
@@ -310,6 +356,15 @@ export default function Home() {
 
       {/* Skills */}
       <SkillsSection />
+
+      {/*
+        Testimonials placeholder.
+        When you have 1–2 quotes:
+          1. Uncomment the import at the top of this file
+          2. Uncomment the TESTIMONIALS array at the top of this file
+          3. Uncomment the <Testimonials /> line below
+      */}
+      {/* <Testimonials items={TESTIMONIALS} /> */}
     </main>
   );
 }

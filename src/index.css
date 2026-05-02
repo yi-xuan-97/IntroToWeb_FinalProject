@@ -13,6 +13,20 @@
   border-width: 0;
 }
 
+/* Without preflight, native <button> elements keep their browser-default
+   background-color (often a light system "buttonface" color). In dark mode
+   this shows as a light cream patch over our dark cards — see the About
+   page accordion bug. Reset button bg here so dark-mode bg classes on
+   parent elements show through correctly. Tailwind utility classes like
+   bg-emerald-800 still win because their specificity > element selector. */
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
