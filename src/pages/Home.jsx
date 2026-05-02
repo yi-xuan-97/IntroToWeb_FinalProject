@@ -23,7 +23,7 @@
 
 import React, { useState } from "react";
 import { Download, Mail, Check } from "lucide-react";
-import photo from "../image/IMG_7919.JPG";
+import photo from "../assets/portrait.jpg";
 import { Pill, PillGroup } from "../components/Pill";
 import { usePageMeta } from "../hooks/usePageMeta";
 // import { Testimonials } from "../components/Testimonials";  // ← uncomment once you have quotes

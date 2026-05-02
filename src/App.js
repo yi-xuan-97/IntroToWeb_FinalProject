@@ -1,4 +1,6 @@
-import "./App.css";
+// Top-level routing. Each visible nav link gets a canonical capitalized
+// path (/Resume, /Projects, /About). The lowercase /resume style aliases
+// could be added later via additional <Route> entries if SEO needs it.
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,33 +13,29 @@ import {
   About,
   Project,
   PreviousWork,
-  Contact,
   Footer,
   NotFound,
-} from "./Page";
+} from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Home" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          {/* New canonical paths matching the visible nav labels */}
-          <Route path="/Resume" element={<PreviousWork />} />
-          <Route path="/Projects" element={<Project />} />
-          <Route path="/Contact" element={<Contact />} />
-          {/* Backward-compat redirects from the old internal paths */}
-          <Route path="/PreviousWork" element={<Navigate to="/Resume" replace />} />
-          <Route path="/Project" element={<Navigate to="/Projects" replace />} />
-          {/* Catch-all 404 — anything not matched above lands here */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Router>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        {/* Canonical paths matching the visible nav labels */}
+        <Route path="/Resume" element={<PreviousWork />} />
+        <Route path="/Projects" element={<Project />} />
+        {/* Backward-compat redirects from the old internal paths */}
+        <Route path="/PreviousWork" element={<Navigate to="/Resume" replace />} />
+        <Route path="/Project" element={<Navigate to="/Projects" replace />} />
+        {/* Catch-all 404 */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -1,50 +1,94 @@
+# Yixuan — Personal Portfolio
 
-# Yixuan's Personal Website 
-**Final Project for Intro to Web Dev**
+A personal portfolio site originally built as a 2023 grad-school final project (Intro to Web Dev), refactored end-to-end in 2026 with Tailwind CSS and AI pair programming.
 
- This is the final project for intro to web dev, the project uses React as it's framework. If you would like to run this project, simply download the project and then
+**Live:** [yixuan-feng.vercel.app](https://yixuan-feng.vercel.app)
 
-In the project directory, you can run:
-### `npm install`
-Install all the packages that are used in the project
-### Set up environment variables
-The contact form uses [EmailJS](https://www.emailjs.com/) to deliver messages.
-Copy `.env.example` to `.env` and fill in your own EmailJS service ID,
-template ID, and public key. The `.env` file is gitignored so credentials
-won't be committed.
-```bash
-cp .env.example .env
-# then edit .env with your real values
+## What's inside
+
+A Single-Page Application (SPA) with four routes:
+
+- `/` — Home: hero, bio, current focus, contact CTAs
+- `/Resume` — Reverse-chronological work history rendered as a vertical timeline
+- `/Projects` — Selected projects with stack pills and GitHub links
+- `/About` — Leadership, campus impact, and life-outside-of-code (accordion-driven)
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Framework | React 18 (Create React App) |
+| Routing | react-router-dom v6 |
+| Styling | Tailwind CSS (`darkMode: 'class'`, `preflight: false` for legacy MUI coexistence) |
+| Icons | lucide-react + inline SVG brand icons |
+| Theming | Class-based dark mode + `localStorage` persistence + `prefers-color-scheme` default |
+| SEO | Per-route document title + meta description via custom `usePageMeta` hook |
+| Deployment | Vercel (auto-deploy on push to `main`) |
+
+## Design system — "Warm Earthy Minimalism"
+
+| Token | Value |
+|---|---|
+| Page bg | `stone-50` (light) / `stone-900` (dark) |
+| Card bg | `stone-100` (light) / `stone-800` (dark) |
+| Body text | `slate-700` (light) / `stone-200` (dark) |
+| Accent | `emerald-800` (light) / `emerald-400` (dark) |
+| Display heading | Outfit (Google Fonts), weight 700–800 |
+| Body | Golos Text |
+
+## Project structure
+
 ```
-### `npm start`
-> Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser
+src/
+├── App.js                     # Router + top-level layout
+├── index.js / index.css       # Entry point + global Tailwind directives
+├── pages/                     # Route components
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── PreviousWork.jsx       # Resume page (timeline)
+│   ├── Project.jsx
+│   ├── NavBar.js
+│   ├── Footer.js
+│   ├── NotFound.js
+│   └── index.js               # Barrel export consumed by App.js
+├── components/                # Shared, reusable UI
+│   ├── Pill.jsx               # Skill / tag pill (used across Home, Resume, Projects)
+│   ├── BrandIcons.jsx         # Inline SVG GitHub + LinkedIn (lucide-react no longer ships these)
+│   ├── DarkModeToggle.jsx
+│   └── Testimonials.jsx       # Renders nothing if items=[] (ready to populate)
+├── hooks/
+│   ├── useDarkMode.js         # Class strategy + localStorage + media query listener
+│   └── usePageMeta.js         # Per-route title + meta description
+└── assets/
+    └── portrait.jpg
+```
 
-> Note: this project was originally deployed on Fleek (`yixuan.on.fleek.co`),
-> which has since pivoted away from static-site hosting. Re-deploy to
-> GitHub Pages, Netlify, or Vercel if you want the site live again.
+## Local development
 
-## Reference
+```bash
+npm install
+npm start                      # http://localhost:3000
+```
 
-The project uses
+## Production build
 
-* React - As framework
-* Material UI - For components used in the project
-* Font Aweseome - For social media logo
-* Google Font - For fancy font style used in project
+```bash
+npm run build                  # outputs to ./build
+```
 
-There are some youtube videos, blogs, tutorials that helps me get the proejct, here you can find the link to them: 
+CI flag is enabled in deploy environments, so any ESLint warning fails the build.
 
-* https://stackoverflow.com/questions/72596908/could-not-resolve-dependency-error-peer-react16-8-0-17-0-0-from-materia
-* https://mui.com/material-ui/getting-started/overview/
-* https://www.youtube.com/watch?v=RAuXFysXkd0
-* https://fonts.google.com/?preview.text=Nice%20to%20meet%20you!%20Looking%20forward%20to%20hearing%20from%20you%20in%20the%20future!!&preview.size=24&preview.text_type=custom
-* https://blog.pope.tech/2020/03/13/empty-link-example/
-* https://medium.com/geekculture/how-to-send-emails-from-a-form-in-react-emailjs-6cdd21bb4190
-* https://www.geeksforgeeks.org/what-is-the-equivalent-of-document-getelementbyid-in-react/
-* https://www.youtube.com/watch?v=NgWGllOjkbs
-* https://stackoverflow.com/questions/65426791/material-ui-inputbase-is-creating-another-text-area-hidden-element
+## Notable engineering details
 
+- **`preflight: false` in `tailwind.config.js`** lets Tailwind coexist with the legacy Material UI v4 imports that still live in some component subtrees. Side effect: a couple of browser-default styles need to be manually re-added in `src/index.css` (border-style, button background reset). See the inline comments in `index.css` for the rationale.
+- **`darkMode: 'class'`** + an inline FOUC-prevention script in `public/index.html` — the `<html>` class is set before paint so dark-pref users never see a white flash on first load.
+- **Accordion uses `inert` + the `grid-rows-[0fr]/[1fr]` animation pattern** — modern HTML/CSS only, no `framer-motion` dependency.
+- **`.npmrc` sets `legacy-peer-deps=true`** — required so npm 7+ (used by Vercel) accepts the React 18 + MUI v4 peer-dep mismatch.
 
+## Deployment
 
+Pushes to `main` auto-deploy to Vercel. The site uses noindex meta + `robots.txt` Disallow during the active job-search window — anyone with the URL can load it, but it stays out of search engines.
 
+## Origin story
+
+This same site started as my first React project in 2023, when I was learning how to wire up state, routes, and components. In 2026 I refactored it end-to-end — first time with Tailwind, first time pair-programming with Gemini and Claude as specialists (Gemini designed, Claude implemented, I scoped). The result is the site you're reading.
