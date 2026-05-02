@@ -115,7 +115,7 @@ export default function Project() {
   usePageMeta({
     title: "Projects",
     description:
-      "Selected projects by Erica Feng — Jama Connect / Jira capstone in React, C-Tran GPS data visualization in Python, an Android task app in Java, and an ongoing AI-assisted Tailwind redesign of this site.",
+      "Selected projects by Yixuan — Jama Connect / Jira capstone in React, C-Tran GPS data visualization in Python, an Android task app in Java, and an ongoing AI-assisted Tailwind redesign of this site.",
   });
 
   return (

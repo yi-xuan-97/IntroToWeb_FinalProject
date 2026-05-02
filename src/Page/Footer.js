@@ -27,7 +27,7 @@ function Footer() {
             className="text-emerald-100 hover:text-white
                        transition-colors duration-200
                        focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 rounded"
-            aria-label="Erica Feng on LinkedIn"
+            aria-label="Yixuan on LinkedIn"
           >
             <LinkedinIcon className="w-6 h-6" />
           </a>
@@ -38,7 +38,7 @@ function Footer() {
             className="text-emerald-100 hover:text-white
                        transition-colors duration-200
                        focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 rounded"
-            aria-label="Erica Feng on GitHub"
+            aria-label="Yixuan on GitHub"
           >
             <GithubIcon className="w-6 h-6" />
           </a>
@@ -47,7 +47,7 @@ function Footer() {
             className="text-emerald-100 hover:text-white
                        transition-colors duration-200
                        focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-200/70 rounded"
-            aria-label="Email Erica Feng"
+            aria-label="Email Yixuan"
           >
             <Mail className="w-6 h-6" strokeWidth={1.75} />
           </a>
@@ -55,7 +55,7 @@ function Footer() {
 
         {/* Copyright was emerald-200/55 (~3.8:1) — failed AA. Now emerald-100/85 ≈ 6.2:1 */}
         <p className="mt-9 text-xs text-emerald-100/85 tracking-wide">
-          © 2026 Erica Feng &nbsp;·&nbsp; Built with React, Tailwind, and care.
+          © 2026 Yixuan &nbsp;·&nbsp; Built with React, Tailwind, and care.
         </p>
       </div>
     </footer>

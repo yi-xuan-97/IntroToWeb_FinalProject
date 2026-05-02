@@ -199,12 +199,12 @@ const lifeOutside = [
     icon: Footprints,
     title: "Slow Walker, Trail Hunter",
     teaser:
-      "Walking for thinking, not for cardio. Iowa has more trails than people give it credit for.",
+      "Walking for thinking, not for cardio. The Midwest has more trails than people give it credit for.",
     body: (
       <>
         <p>
           I walk for thinking, not for cardio. Weekends that's a quiet{" "}
-          <strong>trail</strong> somewhere — Iowa has more of them than people
+          <strong>trail</strong> somewhere — the Midwest has more of them than people
           give it credit for, and the prairie light at 6 PM is genuinely worth
           showing up for.
         </p>
@@ -353,7 +353,7 @@ export default function AboutPage() {
   usePageMeta({
     title: "About",
     description:
-      "Beyond the code — Erica Feng's leadership, campus impact, and life outside engineering. International Night for 300+ attendees, accommodated testing at PSU, mentoring international students, and a long-running attempt at perfect Northeastern Guobaorou.",
+      "Beyond the code — Yixuan's leadership, campus impact, and life outside engineering. International Night for 300+ attendees, accommodated testing at PSU, mentoring international students, and a long-running attempt at perfect Northeastern Guobaorou.",
   });
 
   return (

@@ -17,7 +17,7 @@
 
 import { useEffect } from "react";
 
-const SITE_SUFFIX = " · Erica Feng";
+const SITE_SUFFIX = " · Yixuan";
 
 export function usePageMeta({ title, description } = {}) {
   useEffect(() => {
@@ -26,8 +26,10 @@ export function usePageMeta({ title, description } = {}) {
     const prevDescription = descTag ? descTag.getAttribute("content") : null;
 
     if (title) {
-      // Append site name unless it's already there (Home page often is)
-      document.title = title.endsWith("Erica Feng") || title.includes(SITE_SUFFIX)
+      // Append site name unless it's already in the title.
+      // Using `includes` (not `endsWith`) so titles like
+      // "Yixuan — Full Stack Developer" don't get a duplicate suffix.
+      document.title = title.includes("Yixuan")
         ? title
         : `${title}${SITE_SUFFIX}`;
     }

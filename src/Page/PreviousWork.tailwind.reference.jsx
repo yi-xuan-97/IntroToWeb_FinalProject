@@ -22,7 +22,7 @@ const jobs = [
   {
     role: "Full Stack Developer",
     company: "Corteva Agriscience",
-    meta: "via Antra Inc. / Insight Global · Johnston, IA (Hybrid)",
+    meta: "via Antra Inc. / Insight Global · Hybrid",
     dates: "Aug 2024 — Present",
     current: true,
     bullets: [
@@ -242,7 +242,7 @@ export default function PreviousWork() {
   usePageMeta({
     title: "Resume",
     description:
-      "Erica Feng's work history — Full Stack Developer at Corteva Agriscience, Antra training program, three internships, and an M.S. in Computer Science from Portland State University.",
+      "Yixuan's work history — Full Stack Developer at Corteva Agriscience, Antra training program, three internships, and an M.S. in Computer Science from Portland State University.",
   });
 
   return (

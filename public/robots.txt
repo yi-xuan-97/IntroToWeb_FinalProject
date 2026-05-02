@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
+#
+# Privacy stance during contractor-period job search:
+#   - noindex meta in index.html keeps the site out of search results
+#   - this robots.txt asks crawlers not to fetch the site at all
+#   - the site is still publicly reachable by direct URL (intentional —
+#     hiring managers I share the link with need to be able to load it)
+#
+# Restore to "Disallow:" (allow all) once it's safe to be discoverable.
 User-agent: *
-Disallow:
+Disallow: /

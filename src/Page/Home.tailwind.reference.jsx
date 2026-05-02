@@ -33,7 +33,14 @@ const EMAIL = "ericafeng0@gmail.com";
 // Configurable availability text — change in one place to update site-wide.
 // When you accept an offer: swap to "Recently joined X 🎉" or set to null
 // to hide the badge entirely.
-const AVAILABILITY = "Open to: Full-time SWE roles · Iowa or Remote";
+const AVAILABILITY = "Open to: Full-time SWE roles · Remote";
+
+// Privacy toggle for the active job-search window.
+// When true: hero shows the photo + "Johnston, Iowa" location pin.
+// When false: photo + location are hidden, bio fills the row alone.
+// Flip back to true once I'm no longer worried about a current coworker
+// stumbling onto the site (e.g. after I've left the contractor role).
+const SHOW_PHOTO = false;
 
 // Testimonials data — populate when you have 1-2 manager / teammate quotes,
 // then uncomment the import above and the <Testimonials /> placement below.
@@ -231,9 +238,9 @@ function SkillsSection() {
 // ─────────────────────────────────────────────────────────────────────────────
 export default function Home() {
   usePageMeta({
-    title: "Erica Feng — Full Stack Developer",
+    title: "Yixuan — Full Stack Developer",
     description:
-      "Full-stack engineer who ships features and the tests behind them. .NET 8 + Angular 16 by day at Corteva Agriscience. Based in Iowa, open to full-time SWE roles.",
+      "Full-stack engineer who ships features and the tests behind them. .NET 8 + Angular 16 by day at Corteva Agriscience. Open to full-time SWE roles.",
   });
 
   return (
@@ -241,39 +248,49 @@ export default function Home() {
       {/* Hero */}
       <section className="px-5 sm:px-8">
         <div className="mx-auto max-w-5xl py-16 md:py-24">
-          <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+          {/* When SHOW_PHOTO is true → 12-col grid (photo + bio).
+              When false → bio renders directly, no grid wrapper, capped
+              with max-w-2xl so the prose stays at a comfortable read width. */}
+          <div className={SHOW_PHOTO ? "grid gap-10 md:grid-cols-12 md:gap-14" : ""}>
 
-            {/* — Photo column — */}
-            <div className="md:col-span-5">
-              <div className="relative">
-                <img
-                  src={photo}
-                  alt="Erica Feng on the Brooklyn Bridge"
-                  className="w-full max-h-80 md:max-h-none md:aspect-[4/5]
-                             rounded-2xl object-cover object-top
-                             shadow-2xl shadow-emerald-900/15"
-                />
-                {/* Soft outer ring — ties photo to design system color */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 rounded-2xl
-                             ring-1 ring-inset ring-stone-900/5"
-                />
+            {/* — Photo column (privacy toggle) — */}
+            {SHOW_PHOTO && (
+              <div className="md:col-span-5">
+                <div className="relative">
+                  <img
+                    src={photo}
+                    alt="Yixuan on the Brooklyn Bridge"
+                    className="w-full max-h-80 md:max-h-none md:aspect-[4/5]
+                               rounded-2xl object-cover object-top
+                               shadow-2xl shadow-emerald-900/15"
+                  />
+                  {/* Soft outer ring — ties photo to design system color */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 rounded-2xl
+                               ring-1 ring-inset ring-stone-900/5"
+                  />
+                </div>
+
+                {/* Location pin — small editorial detail under photo */}
+                <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500 dark:text-stone-400">
+                  <MapPin className="h-3.5 w-3.5" strokeWidth={2} />
+                  Johnston, Iowa
+                </p>
               </div>
-
-              {/* Location pin — small editorial detail under photo */}
-              <p className="mt-4 flex items-center gap-1.5 text-sm text-slate-500 dark:text-stone-400">
-                <MapPin className="h-3.5 w-3.5" strokeWidth={2} />
-                Johnston, Iowa
-              </p>
-            </div>
+            )}
 
             {/* — Bio + Currently + CTAs column —
                 Explicit flex-col + items-start ensures predictable vertical
                 stacking. Each child uses mt-* for spacing instead of relying
                 on space-y-* + browser default <p> margins (which conflict
-                because preflight is disabled in tailwind.config.js). */}
-            <div className="md:col-span-7 flex flex-col items-start">
+                because preflight is disabled in tailwind.config.js).
+                Width: col-span-7 when paired with photo, max-w-2xl when alone. */}
+            <div className={
+              SHOW_PHOTO
+                ? "md:col-span-7 flex flex-col items-start"
+                : "max-w-2xl flex flex-col items-start"
+            }>
               {/* Eyebrow */}
               <p className="m-0 text-sm font-medium uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
                 Hi there
@@ -285,7 +302,7 @@ export default function Home() {
                            text-slate-900 dark:text-stone-100 md:text-5xl
                            leading-[1.15]"
               >
-                I&rsquo;m Erica Feng.
+                I&rsquo;m Yixuan.
               </h1>
 
               {/* Positioning tagline — sub-heading establishing role + stack
@@ -314,7 +331,7 @@ export default function Home() {
                 code and out of it: this same site started as my first React
                 project in 2023 and has grown alongside me. When I&rsquo;m
                 not debugging or optimizing queries, you can usually find me
-                walking the trails around Johnston or hanging out with my
+                walking the trails or hanging out with my
                 rescue cat,{" "}
                 <strong className="font-semibold text-slate-900 dark:text-stone-100">Luba</strong>.
               </p>

@@ -82,7 +82,7 @@ function NavBar() {
                      hover:opacity-80 transition-opacity
                      focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-800/30 rounded"
         >
-          ERICA FENG
+          YIXUAN
         </NavLink>
 
         {/* Desktop nav (md and up).
