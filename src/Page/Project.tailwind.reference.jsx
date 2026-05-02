@@ -21,7 +21,7 @@ const projects = [
     tag: "Capstone · 2020",
     title: "Jama Connect ↔ Jira Extension",
     description:
-      "Eight-person agile team capstone partnering with local company Jama Software to build a Jira ↔ Jama Connect extension. The extension lets developers browse Jama content from Jira, create cross-tool links, and sync user-defined fields. I interviewed the sponsor to capture requirements, authored user stories, designed the UI/UX in Figma, and developed frontend search components in React.",
+      "Capstone partnering with a real client — Jama Software. Eight-person agile team built a Jira extension that lets product teams browse and link Jama Connect requirements without leaving the Jira UI, eliminating a daily context-switch between two tools. I owned the sponsor interview cycle, translated their asks into user stories, prototyped the UI in Figma, and shipped the search experience as React components.",
     stack: ["React", "Figma", "Agile", "Jira API", "User Stories"],
     githubUrl: "https://github.com/CapstoneBitsPlease/JamaConnectFrontend",
   },
@@ -29,7 +29,7 @@ const projects = [
     tag: "Data Project · 2020",
     title: "C-Tran GPS Data Visualization",
     description:
-      "Two-person team analyzing GPS breadcrumb data from a regional transit organization (C-Tran) to characterize position deviation. I cleaned the raw data, built statistical visualizations in Python with Pandas and Seaborn, analyzed the distribution and magnitude of GPS deviation, and presented findings in a final proposal back to C-Tran.",
+      "Two-person team for a regional transit org (C-Tran). The brief: characterize where their GPS data drifted and why. I cleaned the raw breadcrumb dumps (the usual messy reality of consumer GPS feeds — gaps, duplicates, suspicious zeros), built distribution and heatmap visualizations in Pandas + Seaborn, and walked through the magnitude and spatial pattern of deviation. Delivered findings + a sampling-strategy proposal back to C-Tran.",
     stack: ["Python", "Pandas", "Seaborn", "Data Analysis"],
     githubUrl: "https://github.com/yi-xuan-97/C-Tran_PartB",
   },
@@ -37,7 +37,7 @@ const projects = [
     tag: "Coursework",
     title: "Android Task Management App",
     description:
-      "Coursework project building an Android application incrementally over a term, with a strong testing focus. I developed a small RESTful Android backend and grew its functionality each milestone, generating integration and unit tests with 80%+ line coverage. Then I built the Android front-end on top.",
+      "Term-long Android coursework with a heavy testing emphasis. Built a Java REST backend and an Android client that consumed it, growing both incrementally across milestones — each milestone gating the next. Wrote unit + integration tests alongside features (not after), holding line coverage above 80% for the full term. The tests-first loop here is the same one I now run on production features at work.",
     stack: ["Java", "Android", "REST API", "Unit Testing", "Integration Testing"],
     githubUrl: "https://github.com/yi-xuan-97/AndriodJavaTaskManagment",
   },
@@ -45,7 +45,7 @@ const projects = [
     tag: "AI Pair Programming · 2026",
     title: "This site — refactored with Gemini & Claude",
     description:
-      "A live demonstration of how quickly I can pick up new tech: I refactored my 2023 Intro-to-Web React project end-to-end using Gemini and Claude as AI pair programmers. Migrated the design system from Material UI v4 to a Tailwind CSS \"Warm Earthy Minimalism\" system, built a shared Pill component used across three pages, restructured Resume into a vertical timeline, hardened accessibility (focus rings, aria-expanded, semantic landmarks), and fixed a sneaky Tailwind preflight-disabled bug that was making every border invisible site-wide. The site you're reading is the artifact.",
+      "Took a 2023 React class project and rebuilt it three years later — Gemini as designer, Claude as developer, me as client scoping the work and making the calls. First time using Tailwind, first time reaching for inert and the grid-rows-[0fr/1fr] animation pattern. Migrated the design system off Material UI v4 to a custom \"Warm Earthy Minimalism\" palette, restructured Resume into a vertical timeline, and hardened a11y end-to-end. Caught a sneaky preflight-disabled Tailwind bug along the way that was making every border invisible site-wide. Live on Vercel. The site you're reading is the artifact.",
     stack: ["React", "Tailwind CSS", "lucide-react", "AI pair programming", "Design Systems", "a11y"],
     githubUrl: "https://github.com/yi-xuan-97/IntroToWeb_FinalProject",
   },
